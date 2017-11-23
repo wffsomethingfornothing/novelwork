@@ -136,8 +136,7 @@ p {
     .header .logo a {
       float: left;
       width: 219px;
-      height: 52px;
-      background: url("https://qidian.gtimg.com/qd/images/logo.0.2.png")/*tpa=https://qidian.gtimg.com/qd/images/logo.0.2.png*/; }
+      height: 52px;/*tpa=https://qidian.gtimg.com/qd/images/logo.0.2.png*/; }
   .header.qq {
     height: 128px; }
     .header.qq .logo a {

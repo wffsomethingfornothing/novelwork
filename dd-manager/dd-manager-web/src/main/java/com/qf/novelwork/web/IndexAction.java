@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexAction {
     @RequestMapping("/")
     public String  index(){
-        return "u_zhuce";
+        return "index";
     }
 
     @ResponseBody
