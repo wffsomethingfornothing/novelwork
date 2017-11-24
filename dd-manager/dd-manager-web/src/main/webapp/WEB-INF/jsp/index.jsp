@@ -36,7 +36,7 @@
 </div>
 <div data-options="region:'west'" style="width:200px;">
     <div id="menu" class="easyui-accordion" data-options="multiple:true,border:false">
-        <div title="小说管理" data-options="selected:true,iconCls:'icon-tip'" style="padding:10px 0;">
+        <div title="小说管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'book-list'}">查询小说</li>
                 <li data-options="attributes:{'href':'book-add'}">新增小说</li>
@@ -51,7 +51,6 @@
         <div title="评论管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'comment-list'}">查询评论</li>
-                <li data-options="attributes:{'href':'reply-list'}">查看回复</li>
             </ul>
         </div>
         <div title="书籍管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">

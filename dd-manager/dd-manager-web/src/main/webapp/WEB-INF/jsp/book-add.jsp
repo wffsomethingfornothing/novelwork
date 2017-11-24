@@ -118,6 +118,7 @@
             success:function(data){
                 if(data > 0) {
                     $.messager.alert('温馨提示','恭喜！添加小说成功！');
+                    novel.closeTabs('新增小说');
                     novel.addTabs('查询小说', 'book-list');
                 }
             }
