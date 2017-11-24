@@ -5,6 +5,7 @@
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="title" property="title" jdbcType="VARCHAR" />
     <result column="context" property="context" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -66,7 +67,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, title, context, created
+    id, title, context, status, created
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qf.novel.pojo.po.NNewsExample" >
     select
@@ -100,9 +101,9 @@
   </delete>
   <insert id="insert" parameterType="com.qf.novel.pojo.po.NNews" >
     insert into n_news (id, title, context, 
-      created)
+      status, created)
     values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{context,jdbcType=VARCHAR}, 
-      #{created,jdbcType=TIMESTAMP})
+      #{status,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.qf.novel.pojo.po.NNews" >
     insert into n_news
@@ -115,6 +116,9 @@
       </if>
       <if test="context != null" >
         context,
+      </if>
+      <if test="status != null" >
+        status,
       </if>
       <if test="created != null" >
         created,
@@ -129,6 +133,9 @@
       </if>
       <if test="context != null" >
         #{context,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="created != null" >
         #{created,jdbcType=TIMESTAMP},
@@ -153,6 +160,9 @@
       <if test="record.context != null" >
         context = #{record.context,jdbcType=VARCHAR},
       </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
       <if test="record.created != null" >
         created = #{record.created,jdbcType=TIMESTAMP},
       </if>
@@ -166,6 +176,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
       context = #{record.context,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
       created = #{record.created,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -180,6 +191,9 @@
       <if test="context != null" >
         context = #{context,jdbcType=VARCHAR},
       </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
       <if test="created != null" >
         created = #{created,jdbcType=TIMESTAMP},
       </if>
@@ -190,6 +204,7 @@
     update n_news
     set title = #{title,jdbcType=VARCHAR},
       context = #{context,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
       created = #{created,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>

@@ -9,7 +9,6 @@ import com.qf.novel.pojo.vo.BookQuery;
 import com.qf.novel.pojo.vo.NBookCustom;
 import com.qf.novel.service.BookService;
 import com.qf.novel.service.IBookCatService;
-import com.qf.novelwork.service.impl.BookCatServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.jws.WebParam;
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -37,6 +34,7 @@ public class BookAction {
     private BookService bookService;
     @Autowired
     private IBookCatService bookCatService;
+
     @ResponseBody
     @RequestMapping("books")
     public Result<NBookCustom> listBooks(Page page, BookQuery query){

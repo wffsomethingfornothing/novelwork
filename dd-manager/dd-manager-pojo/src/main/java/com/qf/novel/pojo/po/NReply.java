@@ -9,6 +9,8 @@ public class NReply {
 
     private Long rid;
 
+    private Integer status;
+
     private Date created;
 
     private String conntent;
@@ -35,6 +37,14 @@ public class NReply {
 
     public void setRid(Long rid) {
         this.rid = rid;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Date getCreated() {

@@ -7,7 +7,7 @@
     <result column="price" property="price" jdbcType="INTEGER" />
     <result column="content" property="content" jdbcType="VARCHAR" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
-    <result column="rid" property="rid" jdbcType="INTEGER" />
+    <result column="rid" property="rid" jdbcType="BIGINT" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -105,7 +105,7 @@
       content, created, rid
       )
     values (#{id,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, 
-      #{content,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{rid,jdbcType=INTEGER}
+      #{content,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, #{rid,jdbcType=BIGINT}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.qf.novel.pojo.po.NOrder" >
@@ -147,7 +147,7 @@
         #{created,jdbcType=TIMESTAMP},
       </if>
       <if test="rid != null" >
-        #{rid,jdbcType=INTEGER},
+        #{rid,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -176,7 +176,7 @@
         created = #{record.created,jdbcType=TIMESTAMP},
       </if>
       <if test="record.rid != null" >
-        rid = #{record.rid,jdbcType=INTEGER},
+        rid = #{record.rid,jdbcType=BIGINT},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -190,7 +190,7 @@
       price = #{record.price,jdbcType=INTEGER},
       content = #{record.content,jdbcType=VARCHAR},
       created = #{record.created,jdbcType=TIMESTAMP},
-      rid = #{record.rid,jdbcType=INTEGER}
+      rid = #{record.rid,jdbcType=BIGINT}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -211,7 +211,7 @@
         created = #{created,jdbcType=TIMESTAMP},
       </if>
       <if test="rid != null" >
-        rid = #{rid,jdbcType=INTEGER},
+        rid = #{rid,jdbcType=BIGINT},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -222,7 +222,7 @@
       price = #{price,jdbcType=INTEGER},
       content = #{content,jdbcType=VARCHAR},
       created = #{created,jdbcType=TIMESTAMP},
-      rid = #{rid,jdbcType=INTEGER}
+      rid = #{rid,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

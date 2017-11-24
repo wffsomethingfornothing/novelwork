@@ -425,52 +425,52 @@ public class NOrderExample {
             return (Criteria) this;
         }
 
-        public Criteria andRidEqualTo(Integer value) {
+        public Criteria andRidEqualTo(Long value) {
             addCriterion("rid =", value, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidNotEqualTo(Integer value) {
+        public Criteria andRidNotEqualTo(Long value) {
             addCriterion("rid <>", value, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidGreaterThan(Integer value) {
+        public Criteria andRidGreaterThan(Long value) {
             addCriterion("rid >", value, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidGreaterThanOrEqualTo(Integer value) {
+        public Criteria andRidGreaterThanOrEqualTo(Long value) {
             addCriterion("rid >=", value, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidLessThan(Integer value) {
+        public Criteria andRidLessThan(Long value) {
             addCriterion("rid <", value, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidLessThanOrEqualTo(Integer value) {
+        public Criteria andRidLessThanOrEqualTo(Long value) {
             addCriterion("rid <=", value, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidIn(List<Integer> values) {
+        public Criteria andRidIn(List<Long> values) {
             addCriterion("rid in", values, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidNotIn(List<Integer> values) {
+        public Criteria andRidNotIn(List<Long> values) {
             addCriterion("rid not in", values, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidBetween(Integer value1, Integer value2) {
+        public Criteria andRidBetween(Long value1, Long value2) {
             addCriterion("rid between", value1, value2, "rid");
             return (Criteria) this;
         }
 
-        public Criteria andRidNotBetween(Integer value1, Integer value2) {
+        public Criteria andRidNotBetween(Long value1, Long value2) {
             addCriterion("rid not between", value1, value2, "rid");
             return (Criteria) this;
         }

@@ -9,6 +9,8 @@ public class NNews {
 
     private String context;
 
+    private Integer status;
+
     private Date created;
 
     public Long getId() {
@@ -33,6 +35,14 @@ public class NNews {
 
     public void setContext(String context) {
         this.context = context == null ? null : context.trim();
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     public Date getCreated() {

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.qf.novel.dao.NCommentMapper" >
-  <resultMap id="BaseResultMap" type="com.qf.novel.pojo.po.NComment" >
+<mapper namespace="com.qf.novel.dao.NContentMapper" >
+  <resultMap id="BaseResultMap" type="com.qf.novel.pojo.po.NContent" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="book_id" property="bookId" jdbcType="BIGINT" />
+    <result column="cid" property="cid" jdbcType="BIGINT" />
     <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="rid" property="rid" jdbcType="BIGINT" />
-    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="sub_title" property="subTitle" jdbcType="VARCHAR" />
+    <result column="title_desc" property="titleDesc" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="pic" property="pic" jdbcType="VARCHAR" />
+    <result column="pic2" property="pic2" jdbcType="VARCHAR" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.qf.novel.pojo.po.NComment" extends="BaseResultMap" >
+  <resultMap id="ResultMapWithBLOBs" type="com.qf.novel.pojo.po.NContent" extends="BaseResultMap" >
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -71,12 +75,12 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, book_id, title, rid, status, created
+    id, cid, title, sub_title, title_desc, url, pic, pic2, created, updated
   </sql>
   <sql id="Blob_Column_List" >
     content
   </sql>
-  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.qf.novel.pojo.po.NCommentExample" >
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.qf.novel.pojo.po.NContentExample" >
     select
     <if test="distinct" >
       distinct
@@ -84,7 +88,7 @@
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from n_comment
+    from n_content
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -92,13 +96,13 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qf.novel.pojo.po.NCommentExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.qf.novel.pojo.po.NContentExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from n_comment
+    from n_content
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -111,47 +115,61 @@
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
-    from n_comment
+    from n_content
     where id = #{id,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from n_comment
+    delete from n_content
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.qf.novel.pojo.po.NCommentExample" >
-    delete from n_comment
+  <delete id="deleteByExample" parameterType="com.qf.novel.pojo.po.NContentExample" >
+    delete from n_content
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.qf.novel.pojo.po.NComment" >
-    insert into n_comment (id, book_id, title, 
-      rid, status, created, 
-      content)
-    values (#{id,jdbcType=BIGINT}, #{bookId,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, 
-      #{rid,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP}, 
-      #{content,jdbcType=LONGVARCHAR})
+  <insert id="insert" parameterType="com.qf.novel.pojo.po.NContent" >
+    insert into n_content (id, cid, title, 
+      sub_title, title_desc, url, 
+      pic, pic2, created, 
+      updated, content)
+    values (#{id,jdbcType=BIGINT}, #{cid,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, 
+      #{subTitle,jdbcType=VARCHAR}, #{titleDesc,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, 
+      #{pic,jdbcType=VARCHAR}, #{pic2,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
+      #{updated,jdbcType=TIMESTAMP}, #{content,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.qf.novel.pojo.po.NComment" >
-    insert into n_comment
+  <insert id="insertSelective" parameterType="com.qf.novel.pojo.po.NContent" >
+    insert into n_content
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="bookId != null" >
-        book_id,
+      <if test="cid != null" >
+        cid,
       </if>
       <if test="title != null" >
         title,
       </if>
-      <if test="rid != null" >
-        rid,
+      <if test="subTitle != null" >
+        sub_title,
       </if>
-      <if test="status != null" >
-        status,
+      <if test="titleDesc != null" >
+        title_desc,
+      </if>
+      <if test="url != null" >
+        url,
+      </if>
+      <if test="pic != null" >
+        pic,
+      </if>
+      <if test="pic2 != null" >
+        pic2,
       </if>
       <if test="created != null" >
         created,
+      </if>
+      <if test="updated != null" >
+        updated,
       </if>
       <if test="content != null" >
         content,
@@ -161,52 +179,76 @@
       <if test="id != null" >
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="bookId != null" >
-        #{bookId,jdbcType=BIGINT},
+      <if test="cid != null" >
+        #{cid,jdbcType=BIGINT},
       </if>
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
       </if>
-      <if test="rid != null" >
-        #{rid,jdbcType=BIGINT},
+      <if test="subTitle != null" >
+        #{subTitle,jdbcType=VARCHAR},
       </if>
-      <if test="status != null" >
-        #{status,jdbcType=INTEGER},
+      <if test="titleDesc != null" >
+        #{titleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null" >
+        #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="pic2 != null" >
+        #{pic2,jdbcType=VARCHAR},
       </if>
       <if test="created != null" >
         #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        #{updated,jdbcType=TIMESTAMP},
       </if>
       <if test="content != null" >
         #{content,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.qf.novel.pojo.po.NCommentExample" resultType="java.lang.Integer" >
-    select count(*) from n_comment
+  <select id="countByExample" parameterType="com.qf.novel.pojo.po.NContentExample" resultType="java.lang.Integer" >
+    select count(*) from n_content
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update n_comment
+    update n_content
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.bookId != null" >
-        book_id = #{record.bookId,jdbcType=BIGINT},
+      <if test="record.cid != null" >
+        cid = #{record.cid,jdbcType=BIGINT},
       </if>
       <if test="record.title != null" >
         title = #{record.title,jdbcType=VARCHAR},
       </if>
-      <if test="record.rid != null" >
-        rid = #{record.rid,jdbcType=BIGINT},
+      <if test="record.subTitle != null" >
+        sub_title = #{record.subTitle,jdbcType=VARCHAR},
       </if>
-      <if test="record.status != null" >
-        status = #{record.status,jdbcType=INTEGER},
+      <if test="record.titleDesc != null" >
+        title_desc = #{record.titleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="record.url != null" >
+        url = #{record.url,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pic != null" >
+        pic = #{record.pic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pic2 != null" >
+        pic2 = #{record.pic2,jdbcType=VARCHAR},
       </if>
       <if test="record.created != null" >
         created = #{record.created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updated != null" >
+        updated = #{record.updated,jdbcType=TIMESTAMP},
       </if>
       <if test="record.content != null" >
         content = #{record.content,jdbcType=LONGVARCHAR},
@@ -217,47 +259,67 @@
     </if>
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map" >
-    update n_comment
+    update n_content
     set id = #{record.id,jdbcType=BIGINT},
-      book_id = #{record.bookId,jdbcType=BIGINT},
+      cid = #{record.cid,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
-      rid = #{record.rid,jdbcType=BIGINT},
-      status = #{record.status,jdbcType=INTEGER},
+      sub_title = #{record.subTitle,jdbcType=VARCHAR},
+      title_desc = #{record.titleDesc,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR},
+      pic = #{record.pic,jdbcType=VARCHAR},
+      pic2 = #{record.pic2,jdbcType=VARCHAR},
       created = #{record.created,jdbcType=TIMESTAMP},
+      updated = #{record.updated,jdbcType=TIMESTAMP},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update n_comment
+    update n_content
     set id = #{record.id,jdbcType=BIGINT},
-      book_id = #{record.bookId,jdbcType=BIGINT},
+      cid = #{record.cid,jdbcType=BIGINT},
       title = #{record.title,jdbcType=VARCHAR},
-      rid = #{record.rid,jdbcType=BIGINT},
-      status = #{record.status,jdbcType=INTEGER},
-      created = #{record.created,jdbcType=TIMESTAMP}
+      sub_title = #{record.subTitle,jdbcType=VARCHAR},
+      title_desc = #{record.titleDesc,jdbcType=VARCHAR},
+      url = #{record.url,jdbcType=VARCHAR},
+      pic = #{record.pic,jdbcType=VARCHAR},
+      pic2 = #{record.pic2,jdbcType=VARCHAR},
+      created = #{record.created,jdbcType=TIMESTAMP},
+      updated = #{record.updated,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qf.novel.pojo.po.NComment" >
-    update n_comment
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.novel.pojo.po.NContent" >
+    update n_content
     <set >
-      <if test="bookId != null" >
-        book_id = #{bookId,jdbcType=BIGINT},
+      <if test="cid != null" >
+        cid = #{cid,jdbcType=BIGINT},
       </if>
       <if test="title != null" >
         title = #{title,jdbcType=VARCHAR},
       </if>
-      <if test="rid != null" >
-        rid = #{rid,jdbcType=BIGINT},
+      <if test="subTitle != null" >
+        sub_title = #{subTitle,jdbcType=VARCHAR},
       </if>
-      <if test="status != null" >
-        status = #{status,jdbcType=INTEGER},
+      <if test="titleDesc != null" >
+        title_desc = #{titleDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="url != null" >
+        url = #{url,jdbcType=VARCHAR},
+      </if>
+      <if test="pic != null" >
+        pic = #{pic,jdbcType=VARCHAR},
+      </if>
+      <if test="pic2 != null" >
+        pic2 = #{pic2,jdbcType=VARCHAR},
       </if>
       <if test="created != null" >
         created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updated != null" >
+        updated = #{updated,jdbcType=TIMESTAMP},
       </if>
       <if test="content != null" >
         content = #{content,jdbcType=LONGVARCHAR},
@@ -265,23 +327,31 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.qf.novel.pojo.po.NComment" >
-    update n_comment
-    set book_id = #{bookId,jdbcType=BIGINT},
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.qf.novel.pojo.po.NContent" >
+    update n_content
+    set cid = #{cid,jdbcType=BIGINT},
       title = #{title,jdbcType=VARCHAR},
-      rid = #{rid,jdbcType=BIGINT},
-      status = #{status,jdbcType=INTEGER},
+      sub_title = #{subTitle,jdbcType=VARCHAR},
+      title_desc = #{titleDesc,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      pic2 = #{pic2,jdbcType=VARCHAR},
       created = #{created,jdbcType=TIMESTAMP},
+      updated = #{updated,jdbcType=TIMESTAMP},
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qf.novel.pojo.po.NComment" >
-    update n_comment
-    set book_id = #{bookId,jdbcType=BIGINT},
+  <update id="updateByPrimaryKey" parameterType="com.qf.novel.pojo.po.NContent" >
+    update n_content
+    set cid = #{cid,jdbcType=BIGINT},
       title = #{title,jdbcType=VARCHAR},
-      rid = #{rid,jdbcType=BIGINT},
-      status = #{status,jdbcType=INTEGER},
-      created = #{created,jdbcType=TIMESTAMP}
+      sub_title = #{subTitle,jdbcType=VARCHAR},
+      title_desc = #{titleDesc,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR},
+      pic = #{pic,jdbcType=VARCHAR},
+      pic2 = #{pic2,jdbcType=VARCHAR},
+      created = #{created,jdbcType=TIMESTAMP},
+      updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

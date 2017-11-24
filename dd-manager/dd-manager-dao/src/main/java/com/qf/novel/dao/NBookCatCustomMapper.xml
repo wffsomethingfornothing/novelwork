@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.novel.dao.NBookCatCustomMapper" >
+  <sql id="Base_Column_List" >
+    c.id, c.parent_id as parentid, c.name, c.status, c.isparent, c.created, c.updated
+  </sql>
+
+  <sql id="Where_Clause">
+    <where>
+      c.status != 3
+      <if test="query != null and query.title != null and query.title != ''">
+        and c.name like '%${query.title}%'
+      </if>
+      <if test="query != null and query.status != null and query.status != 0">
+        and c.status = #{query.status}
+      </if>
+    </where>
+  </sql>
+
+  <select id="countBookCats" resultType="_int">
+    select count(1)
+    from n_book_cat c
+    <include refid="Where_Clause" />
+  </select>
+
+  <select id="listBookCatsByPage" resultType="com.qf.novel.pojo.po.NBookCat">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM n_book_cat c
+--     LEFT JOIN n_book b ON a.id=b.aid
+    <include refid="Where_Clause" />
+    <choose>
+      <when test="order != null and order.sort != null and order.order != null and order.orderParams != null">
+        <foreach collection="order.orderParams" item="item" open="order by" close="" separator=",">
+          c.${item}
+        </foreach>
+      </when>
+      <otherwise>
+        ORDER BY c.id ASC
+      </otherwise>
+    </choose>
+    LIMIT #{page.offset},#{page.rows}
+  </select>
+
+</mapper>

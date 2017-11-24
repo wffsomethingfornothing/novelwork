@@ -1,17 +1,16 @@
 package com.qf.novel.pojo.po;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-public class NCommentExample {
+public class BBookReaderExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public NCommentExample() {
+    public BBookReaderExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -165,133 +164,63 @@ public class NCommentExample {
             return (Criteria) this;
         }
 
-        public Criteria andBookIdIsNull() {
-            addCriterion("book_id is null");
+        public Criteria andBidIsNull() {
+            addCriterion("bid is null");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdIsNotNull() {
-            addCriterion("book_id is not null");
+        public Criteria andBidIsNotNull() {
+            addCriterion("bid is not null");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdEqualTo(Long value) {
-            addCriterion("book_id =", value, "bookId");
+        public Criteria andBidEqualTo(Long value) {
+            addCriterion("bid =", value, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdNotEqualTo(Long value) {
-            addCriterion("book_id <>", value, "bookId");
+        public Criteria andBidNotEqualTo(Long value) {
+            addCriterion("bid <>", value, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdGreaterThan(Long value) {
-            addCriterion("book_id >", value, "bookId");
+        public Criteria andBidGreaterThan(Long value) {
+            addCriterion("bid >", value, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdGreaterThanOrEqualTo(Long value) {
-            addCriterion("book_id >=", value, "bookId");
+        public Criteria andBidGreaterThanOrEqualTo(Long value) {
+            addCriterion("bid >=", value, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdLessThan(Long value) {
-            addCriterion("book_id <", value, "bookId");
+        public Criteria andBidLessThan(Long value) {
+            addCriterion("bid <", value, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdLessThanOrEqualTo(Long value) {
-            addCriterion("book_id <=", value, "bookId");
+        public Criteria andBidLessThanOrEqualTo(Long value) {
+            addCriterion("bid <=", value, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdIn(List<Long> values) {
-            addCriterion("book_id in", values, "bookId");
+        public Criteria andBidIn(List<Long> values) {
+            addCriterion("bid in", values, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdNotIn(List<Long> values) {
-            addCriterion("book_id not in", values, "bookId");
+        public Criteria andBidNotIn(List<Long> values) {
+            addCriterion("bid not in", values, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdBetween(Long value1, Long value2) {
-            addCriterion("book_id between", value1, value2, "bookId");
+        public Criteria andBidBetween(Long value1, Long value2) {
+            addCriterion("bid between", value1, value2, "bid");
             return (Criteria) this;
         }
 
-        public Criteria andBookIdNotBetween(Long value1, Long value2) {
-            addCriterion("book_id not between", value1, value2, "bookId");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleIsNull() {
-            addCriterion("title is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleIsNotNull() {
-            addCriterion("title is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleEqualTo(String value) {
-            addCriterion("title =", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleNotEqualTo(String value) {
-            addCriterion("title <>", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleGreaterThan(String value) {
-            addCriterion("title >", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleGreaterThanOrEqualTo(String value) {
-            addCriterion("title >=", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleLessThan(String value) {
-            addCriterion("title <", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleLessThanOrEqualTo(String value) {
-            addCriterion("title <=", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleLike(String value) {
-            addCriterion("title like", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleNotLike(String value) {
-            addCriterion("title not like", value, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleIn(List<String> values) {
-            addCriterion("title in", values, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleNotIn(List<String> values) {
-            addCriterion("title not in", values, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleBetween(String value1, String value2) {
-            addCriterion("title between", value1, value2, "title");
-            return (Criteria) this;
-        }
-
-        public Criteria andTitleNotBetween(String value1, String value2) {
-            addCriterion("title not between", value1, value2, "title");
+        public Criteria andBidNotBetween(Long value1, Long value2) {
+            addCriterion("bid not between", value1, value2, "bid");
             return (Criteria) this;
         }
 
@@ -412,66 +341,6 @@ public class NCommentExample {
 
         public Criteria andStatusNotBetween(Integer value1, Integer value2) {
             addCriterion("status not between", value1, value2, "status");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedIsNull() {
-            addCriterion("created is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedIsNotNull() {
-            addCriterion("created is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedEqualTo(Date value) {
-            addCriterion("created =", value, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedNotEqualTo(Date value) {
-            addCriterion("created <>", value, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedGreaterThan(Date value) {
-            addCriterion("created >", value, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedGreaterThanOrEqualTo(Date value) {
-            addCriterion("created >=", value, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedLessThan(Date value) {
-            addCriterion("created <", value, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedLessThanOrEqualTo(Date value) {
-            addCriterion("created <=", value, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedIn(List<Date> values) {
-            addCriterion("created in", values, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedNotIn(List<Date> values) {
-            addCriterion("created not in", values, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedBetween(Date value1, Date value2) {
-            addCriterion("created between", value1, value2, "created");
-            return (Criteria) this;
-        }
-
-        public Criteria andCreatedNotBetween(Date value1, Date value2) {
-            addCriterion("created not between", value1, value2, "created");
             return (Criteria) this;
         }
     }

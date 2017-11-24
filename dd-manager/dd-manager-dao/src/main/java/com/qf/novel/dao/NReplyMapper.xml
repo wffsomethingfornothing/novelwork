@@ -5,6 +5,7 @@
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="comment_id" property="commentId" jdbcType="BIGINT" />
     <result column="rid" property="rid" jdbcType="BIGINT" />
+    <result column="status" property="status" jdbcType="INTEGER" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.qf.novel.pojo.po.NReply" extends="BaseResultMap" >
@@ -69,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, comment_id, rid, created
+    id, comment_id, rid, status, created
   </sql>
   <sql id="Blob_Column_List" >
     conntent
@@ -124,9 +125,11 @@
   </delete>
   <insert id="insert" parameterType="com.qf.novel.pojo.po.NReply" >
     insert into n_reply (id, comment_id, rid, 
-      created, conntent)
+      status, created, conntent
+      )
     values (#{id,jdbcType=BIGINT}, #{commentId,jdbcType=BIGINT}, #{rid,jdbcType=BIGINT}, 
-      #{created,jdbcType=TIMESTAMP}, #{conntent,jdbcType=LONGVARCHAR})
+      #{status,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP}, #{conntent,jdbcType=LONGVARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.qf.novel.pojo.po.NReply" >
     insert into n_reply
@@ -139,6 +142,9 @@
       </if>
       <if test="rid != null" >
         rid,
+      </if>
+      <if test="status != null" >
+        status,
       </if>
       <if test="created != null" >
         created,
@@ -156,6 +162,9 @@
       </if>
       <if test="rid != null" >
         #{rid,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="created != null" >
         #{created,jdbcType=TIMESTAMP},
@@ -183,6 +192,9 @@
       <if test="record.rid != null" >
         rid = #{record.rid,jdbcType=BIGINT},
       </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
       <if test="record.created != null" >
         created = #{record.created,jdbcType=TIMESTAMP},
       </if>
@@ -199,6 +211,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       comment_id = #{record.commentId,jdbcType=BIGINT},
       rid = #{record.rid,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
       created = #{record.created,jdbcType=TIMESTAMP},
       conntent = #{record.conntent,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
@@ -210,6 +223,7 @@
     set id = #{record.id,jdbcType=BIGINT},
       comment_id = #{record.commentId,jdbcType=BIGINT},
       rid = #{record.rid,jdbcType=BIGINT},
+      status = #{record.status,jdbcType=INTEGER},
       created = #{record.created,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -224,6 +238,9 @@
       <if test="rid != null" >
         rid = #{rid,jdbcType=BIGINT},
       </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
       <if test="created != null" >
         created = #{created,jdbcType=TIMESTAMP},
       </if>
@@ -237,6 +254,7 @@
     update n_reply
     set comment_id = #{commentId,jdbcType=BIGINT},
       rid = #{rid,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
       created = #{created,jdbcType=TIMESTAMP},
       conntent = #{conntent,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
@@ -245,6 +263,7 @@
     update n_reply
     set comment_id = #{commentId,jdbcType=BIGINT},
       rid = #{rid,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER},
       created = #{created,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>

@@ -42,6 +42,12 @@
                 <li data-options="attributes:{'href':'book-add'}">新增小说</li>
             </ul>
         </div>
+        <div title="作者管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
+            <ul class="easyui-tree">
+                <li data-options="attributes:{'href':'author-list'}">查询作者</li>
+                <li data-options="attributes:{'href':'author-add'}">新增作者</li>
+            </ul>
+        </div>
         <div title="评论管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'comment-list'}">查询评论</li>
@@ -66,6 +72,13 @@
         <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'index-item'}">solr索引库维护</li>
+            </ul>
+        </div>
+        <div title="小说分类管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
+            <ul class="easyui-tree">
+                <li data-options="attributes:{'href':'bookcat-list'}">查询分类</li>
+                <li data-options="attributes:{'href':'bookcat-add'}">新增子分类</li>
+                <li data-options="attributes:{'href':'bookcat-add1'}">新增根分类</li>
             </ul>
         </div>
         <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">

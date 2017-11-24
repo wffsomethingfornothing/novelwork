@@ -13,7 +13,7 @@ public class NOrder {
 
     private Date created;
 
-    private Integer rid;
+    private Long rid;
 
     public Long getId() {
         return id;
@@ -55,11 +55,11 @@ public class NOrder {
         this.created = created;
     }
 
-    public Integer getRid() {
+    public Long getRid() {
         return rid;
     }
 
-    public void setRid(Integer rid) {
+    public void setRid(Long rid) {
         this.rid = rid;
     }
 }
