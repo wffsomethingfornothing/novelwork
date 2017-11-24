@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by ${lxh} on 2017/11/13 0013
@@ -62,6 +63,12 @@ public class IndexAction {
             mess="3";
         }
         return mess;
+    }
+
+    @RequestMapping("/logout")
+    public String doLogout(HttpSession session){
+        session.removeAttribute("sessionAdmin");
+        return "login";
     }
 
 

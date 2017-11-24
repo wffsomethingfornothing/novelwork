@@ -25,10 +25,11 @@
     <div><a style="float: left; margin-top: 10px;margin-left: 150px;font-size:30px ;color: white;text-align: center; ">后&nbsp;台&nbsp;管&nbsp;理&nbsp;系&nbsp;统</a></div>
     <ul style="list-style-type: none;margin-top: 17px;">
 
-        <li style="float: right;"><a href="#">安全退出&nbsp;&nbsp;</a></li>
+        <li style="float: right;"><a href="#" onClick="javaScript:checkLogout()">安全退出&nbsp;&nbsp;</a></li>
         <li style="float: right;"><a href="#">站内公告&nbsp;|&nbsp;</a></li>
         <li style="float: right;"><a href="index">返回首页&nbsp;|&nbsp;</a></li>
-        <li style="float: right;"><a>您好,admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <li style="float: right;"><a>您好,
+            <span style="font-size: 30px;font-weight: bolder;color: red;">${sessionAdmin.adminname} </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
     </ul>
 </div>
 <div data-options="region:'south'" style="padding:5px;background:#eee;">
@@ -36,7 +37,7 @@
 </div>
 <div data-options="region:'west'" style="width:200px;">
     <div id="menu" class="easyui-accordion" data-options="multiple:true,border:false">
-        <div title="小说管理" data-options="selected:true,iconCls:'icon-tip'" style="padding:10px 0;">
+        <div title="小说管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'book-list'}">查询小说</li>
                 <li data-options="attributes:{'href':'book-add'}">新增小说</li>
@@ -51,7 +52,6 @@
         <div title="评论管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'comment-list'}">查询评论</li>
-                <li data-options="attributes:{'href':'reply-list'}">查看回复</li>
             </ul>
         </div>
         <div title="书籍管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
@@ -140,6 +140,15 @@
 <!-- 自定义js -->
 <script>
     novel.registerMenuEvent();
+</script>
+<script type="text/javascript">
+    function checkLogout(){
+        var flag = confirm("确定退出吗?");
+        if(flag){
+            window.location.href="${pageContext.request.contextPath}/logout"
+        }
+
+    }
 </script>
 </body>
 </html>
