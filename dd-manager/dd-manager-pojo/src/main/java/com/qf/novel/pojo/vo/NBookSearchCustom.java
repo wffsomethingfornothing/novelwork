@@ -6,11 +6,11 @@ package com.qf.novel.pojo.vo;
  * Time: 14:17
  * Version:V1.0
  */
-public class TbItemSearchCustom {
+public class NBookSearchCustom {
     private String id;//solr中的id是字符串格式
     private String title;
-    private String sellPoint;
-    private long price;
+    private String readPoint;
+    private long score;
     private String image;
     private String catName;
 
@@ -30,20 +30,20 @@ public class TbItemSearchCustom {
         this.title = title;
     }
 
-    public String getSellPoint() {
-        return sellPoint;
+    public String getReadPoint() {
+        return readPoint;
     }
 
-    public void setSellPoint(String sellPoint) {
-        this.sellPoint = sellPoint;
+    public void setReadPoint(String readPoint) {
+        this.readPoint = readPoint;
     }
 
-    public long getPrice() {
-        return price;
+    public long getScore() {
+        return score;
     }
 
-    public void setPrice(long price) {
-        this.price = price;
+    public void setScore(long score) {
+        this.score = score;
     }
 
     public String getImage() {

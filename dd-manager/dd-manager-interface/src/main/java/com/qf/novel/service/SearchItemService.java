@@ -1,7 +1,7 @@
 package com.qf.novel.service;
 
-import com.qf.novel.pojo.vo.TbSearchItemResult;
+import com.qf.novel.pojo.vo.NSearchBookResult;
 
 public interface SearchItemService {
-    TbSearchItemResult search(String keyword, Integer page, int i);
+    NSearchBookResult search(String keyword, Integer page, int i);
 }

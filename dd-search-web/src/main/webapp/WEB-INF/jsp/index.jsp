@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -126,7 +128,9 @@
             </a>
         </div>
         <div class="logo fl">
-            <a href="https://www.qidian.com/" data-eid=""></a>
+            <a href="https://www.qidian.com/" data-eid="">
+                <img src="img/loge-qf.png">
+            </a>
         </div>
         <div class="search-wrap fl">
             <form id="formUrl" action="//www.qidian.com/search" method="get" target="_blank">
@@ -779,6 +783,58 @@
     
         <div class="book-img-text">
             <ul class="all-img-list cf">
+               <%-- <c:forEach items="${itemList }" var="item">
+                    <li>
+                        <div class="l-wrap">
+                            <div class="pic">
+                                <a class="trackref"
+                                   href="http://localhost:8086/item/${item.id}.html" title=""
+                                   target="_blank"> <img src="${item.image }"
+                                                         style="display: inline" />
+                                </a>
+                            </div>
+                            <div class="price">
+									<span><span class="p-now">￥<strong><fmt:formatNumber
+                                            groupingUsed="false" maxFractionDigits="2"
+                                            minFractionDigits="2" value="${item.price / 100 }" /></strong></span><span
+                                            class="p-nor"></span><span class="active" style="">直降</span></span>
+                            </div>
+                            <div class="title-a">
+                                <a class="trackref presaleSign_225865"
+                                   href="http://localhost:8086/item/${item.id}.html"
+                                   target="_blank">${item.title }</a>
+                            </div>
+                            <div class="title-b" style="">
+                                <a class="trackref"
+                                   href="http://localhost:8086/item/${item.id}.html"
+                                   target="_blank">${sell_point }</a>
+                            </div>
+                            <div class="comment">
+                                <div class="owner_shop_list">自营</div>
+                            </div>
+                        </div>
+                    </li>
+                </c:forEach>--%>
+               <%-- <c:forEach items="${bookList }" var="book" >
+                    <li data-rid="1">
+                        <div class="book-img-box">
+                            <a href="https://book.qidian.com/info/1010468795" data-bid="1010468795" data-eid="qd_B57" target="_blank"><img src="img/150_005.jpg"></a>
+                        </div>
+                        <div class="book-mid-info">
+                            <h4><a href="https://book.qidian.com/info/1010468795" target="_blank" data-eid="qd_B58" data-bid="1010468795">飞剑问道</a></h4>
+                            <p class="author">
+                                <img src="img/user.png"><a class="name" href="https://my.qidian.com/author/4362096" data-eid="qd_B59" target="_blank">我吃西红柿</a><em>|</em><a href="https://www.qidian.com/xianxia" target="_blank" data-eid="qd_B60">仙侠</a><i>·</i><a class="go-sub-type" data-typeid="22" data-subtypeid="20101" href="javascript:" data-eid="qd_B61">古典仙侠</a><em>|</em><span>连载中</span>
+
+                            </p>
+                            <p class="intro">
+                                在这个世界，有狐仙、河神、水怪、大妖，也有求长生的修行者。修行者们，开法眼，可看妖魔鬼怪。炼一口飞剑，可千里杀敌。千里眼、顺风耳，更可探查四方。
+                            </p>
+                            <p class="update"><span>34.62万字</span>
+
+                            </p>
+                        </div>
+                    </li>
+                </c:forEach>--%>
                 
                 <li data-rid="1">
                 <div class="book-img-box">

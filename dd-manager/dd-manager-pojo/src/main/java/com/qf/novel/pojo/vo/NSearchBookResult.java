@@ -9,11 +9,13 @@ import java.util.List;
  * Time: 9:46
  * Version:V1.0
  */
-public class TbSearchItemResult {
+public class NSearchBookResult {
 
     private long recordCount;
+
+
     private int totalPages;
-    private List<TbItemSearchCustom> itemList;
+    private List<NBookSearchCustom> bookList;
 
     public long getRecordCount() {
         return recordCount;
@@ -31,11 +33,11 @@ public class TbSearchItemResult {
         this.totalPages = totalPages;
     }
 
-    public List<TbItemSearchCustom> getItemList() {
-        return itemList;
+    public List<NBookSearchCustom> getBookList() {
+        return bookList;
     }
 
-    public void setItemList(List<TbItemSearchCustom> itemList) {
-        this.itemList = itemList;
+    public void setBookList(List<NBookSearchCustom> bookList) {
+        this.bookList = bookList;
     }
 }
