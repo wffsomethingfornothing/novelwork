@@ -94,10 +94,14 @@
         ue.setContent('小说描述');
     }
 
+    //初始化之前删除原有的容器
+    UE.delEditor('container');
+
     //实例化富文本编辑器
     var ue = UE.getEditor('container',{
         initialFrameWidth: '100%',//初始化编辑器宽度
-        initialFrameHeight: '300'
+        initialFrameHeight: '300',
+        serverUrl:'file/upload'
     });
 
     //小说保存功能
