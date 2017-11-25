@@ -66,7 +66,7 @@
         </div>
         <div title="新闻管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-item'}">solr索引库维护</li>
+                <li data-options="attributes:{'href':'news-list'}">查看新闻</li>
             </ul>
         </div>
         <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
@@ -81,9 +81,9 @@
                 <li data-options="attributes:{'href':'bookcat-add1'}">新增根分类</li>
             </ul>
         </div>
-        <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
+        <div title="读者管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-item'}">solr索引库维护</li>
+                <li data-options="attributes:{'href':'reader-list'}">查看读者</li>
             </ul>
         </div>
         <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
