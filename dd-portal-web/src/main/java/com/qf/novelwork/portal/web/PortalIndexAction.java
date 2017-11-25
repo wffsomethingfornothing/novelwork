@@ -23,7 +23,6 @@ public class PortalIndexAction {
     @Autowired
     private ContentService contentService;
 
-
     @RequestMapping("/")
     public String portalIndex(Model model){
         //第一步：使用service去查，根据tb_content_category的ID去查
