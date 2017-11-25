@@ -83,17 +83,11 @@ public class BookServiceImpl implements BookService {
 
 
             NBookDescExample example2 = new NBookDescExample();
-            NBookDescExample.Criteria criteria12 = example2.createCriteria();
-            criteria.andIdEqualTo(nBook1.getId());
+            NBookDescExample.Criteria criteria2 = example2.createCriteria();
+            criteria2.andBookIdEqualTo(nBook1.getId());
             NBookDesc bookDesc = bookDescDao.selectByPrimaryKey(nBook.getId());
-            System.out.println(bookDesc.getBookDesc());
             bookDesc.setBookDesc(content);
             bookDesc.setUpdated(new Date());
-            System.out.println(content);
-            System.out.println(bookDesc.getBookDesc());
-            System.out.println(nBook1.getId());
-            System.out.println(bookDesc.getBookId());
-            //i += bookDescDao.updateByExample(bookDesc,example2);
             i += bookDescDao.updateByExampleSelective(bookDesc, example2);
 
         }catch (Exception e){

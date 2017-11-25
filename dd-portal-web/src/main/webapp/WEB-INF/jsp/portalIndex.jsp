@@ -5,7 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/stats.js" name="MTAH5" sid="500451537">
 	
 </script>
@@ -361,119 +364,107 @@
 				<dl>
 					<dd>
 						<a href="https://www.qidian.com/xuanhuan" target="_blank"
-							data-eid="qd_A71"><cite><em class="iconfont"></em><span
-								class="info"><i>玄幻</i><b>611188</b></span></cite></a>
+							data-eid="qd_A71"><cite><em style="background-image: url(img/90_002.jpg);height: 10px;"></em><span class="info">玄幻</span></cite></a>
 					</dd>
 					<dd>
 						<a href="https://www.qidian.com/qihuan" target="_blank"
-							data-eid="qd_A72"><cite><em class="iconfont"></em><span
-								class="info"><i>奇幻</i><b>131648</b></span></cite></a>
+							data-eid="qd_A72"><cite><span class="info"><i>奇幻</i></span></cite></a>
 					</dd>
 					<dd class="even">
 						<a href="https://www.qidian.com/wuxia" target="_blank"
-							data-eid="qd_A73"><cite><em class="iconfont"></em><span
-								class="info"><i>武侠</i><b>36145</b></span></cite></a>
+							data-eid="qd_A73"><cite><span class="info"><i>武侠</i></span></cite></a>
 					</dd>
 					<dd class="even">
 						<a href="https://www.qidian.com/xianxia" target="_blank"
-							data-eid="qd_A74"><cite><em class="iconfont"></em><span
-								class="info"><i>仙侠</i><b>208661</b></span></cite></a>
+							data-eid="qd_A74"><cite><span class="info"><i>仙侠</i></span></cite></a>
 					</dd>
 					<dd>
 						<a href="https://www.qidian.com/dushi" target="_blank"
-							data-eid="qd_A75"><cite><em class="iconfont"></em><span
-								class="info"><i>都市</i><b>331751</b></span></cite></a>
+							data-eid="qd_A75"><cite><span class="info"><i>都市</i></span></cite></a>
 					</dd>
 					<dd>
 						<a href="https://www.qidian.com/xianshi" target="_blank"
-							data-eid="qd_A76"><cite><em class="iconfont"></em><span
-								class="info"><i>现实</i><b>14540</b></span></cite></a>
+							data-eid="qd_A76"><cite><span class="info"><i>现实</i></span></cite></a>
 					</dd>
 					<dd class="even">
 						<a href="https://www.qidian.com/junshi" target="_blank"
-							data-eid="qd_A77"><cite><em class="iconfont"></em><span
-								class="info"><i>军事</i><b>18387</b></span></cite></a>
+							data-eid="qd_A77"><cite><span class="info"><i>军事</i></span></cite></a>
 					</dd>
 					<dd class="even">
 						<a href="https://www.qidian.com/lishi" target="_blank"
-							data-eid="qd_A78"><cite><em class="iconfont"></em><span
-								class="info"><i>历史</i><b>70544</b></span></cite></a>
+							data-eid="qd_A78"><cite><span class="info"><i>历史</i></span></cite></a>
 					</dd>
 					<dd>
 						<a href="https://www.qidian.com/youxi" target="_blank"
-							data-eid="qd_A79"><cite><em class="iconfont"></em><span
-								class="info"><i>游戏</i><b>94758</b></span></cite></a>
+							data-eid="qd_A79"><cite><span class="info"><i>游戏</i></span></cite></a>
 					</dd>
 					<dd>
 						<a href="https://www.qidian.com/tiyu" target="_blank"
-							data-eid="qd_A80"><cite><em class="iconfont tiyu"></em><span
-								class="info"><i>体育</i><b>9107</b></span></cite></a>
+							data-eid="qd_A80"><cite><span class="info"><i>体育</i></span></cite></a>
 					</dd>
 					<dd class="even">
 						<a href="https://www.qidian.com/kehuan" target="_blank"
-							data-eid="qd_A81"><cite><em class="iconfont"></em><span
-								class="info"><i>科幻</i><b>130166</b></span></cite></a>
+							data-eid="qd_A81"><cite><span class="info"><i>科幻</i></span></cite></a>
 					</dd>
 					<dd class="even">
 						<a href="https://www.qidian.com/lingyi" target="_blank"
-							data-eid="qd_A82"><cite><em class="iconfont lingyi"></em><span
-								class="info"><i>灵异</i><b>52561</b></span></cite></a>
+							data-eid="qd_A82"><cite><span class="info"><i>灵异</i></span></cite></a>
 					</dd>
 					<dd>
-						<a href="https://www.qdmm.com/" target="_blank" data-eid="qd_A83"><cite><em
-								class="iconfont"></em><span class="info"><i>女生网</i><b>619726</b></span></cite></a>
+						<a href="https://www.qdmm.com/" target="_blank" data-eid="qd_A83"><cite><span
+								class="info"><i>女生网</i></span></cite></a>
 					</dd>
 					<dd>
 						<a href="https://www.qidian.com/2cy" target="_blank"
-							data-eid="qd_A84"><cite><em class="iconfont erciyuan"></em><span
-								class="info"><i>二次元</i><b>88657</b></span></cite></a>
+							data-eid="qd_A84"><cite><span class="info"><i>二次元</i></span></cite></a>
 					</dd>
 				</dl>
 			</div>
 			<div class="focus-box fl" data-l1="6">
 				<div class="focus-slider">
 					<div class="lbf-slides switchable-slides" id="switchable-slides">
-						<a class="more" href="https://www.qidian.com/book/coverrec"
+						<a href="https://www.qidian.com/book/coverrec"
 							target="_blank" data-eid="qd_A173"><i><em></em><em></em><em></em></i></a>
-						<ul>
-							<li id="item1" data-rid="1"
-								style="transition: transform 300ms linear 0s; backface-visibility: hidden; transform: translateX(-100%);"><a
-								href="https://book.qidian.com/info/1004650252" target="_blank"
-								data-eid="qd_A85"><img src="img/0_007.jpg" width="100%"></a></li>
-							<li id="item2" data-rid="2"
-								style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(0%); backface-visibility: hidden;"><a
-								href="https://book.qidian.com/info/1009644207" target="_blank"
-								data-eid="qd_A86"><img class="load"
-									data-src=" //qidian.qpic.cn/qidian_common/349573/c1da48f6927aa7d461329a9cd2076624/0"
-									src="img/0_002.jpg" width="100%"></a></li>
-							<li id="item3" data-rid="3"
-								style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(-100%); backface-visibility: hidden;"><a
-								href="https://book.qidian.com/info/1007103215" target="_blank"
-								data-eid="qd_A87"><img class="load"
-									data-src=" //qidian.qpic.cn/qidian_common/349573/f7f4d3f724bdea87d7856129415971b8/0"
-									src="img/0_005.jpg" width="100%"></a></li>
-							<li id="item4" data-rid="4"
-								style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(-100%); backface-visibility: hidden;"><a
-								href="https://book.qidian.com/info/1005235019" target="_blank"
-								data-eid="qd_A88"><img class="load"
-									data-src=" //qidian.qpic.cn/qidian_common/349573/1dd0a31c5736594eb96c5568f1ef64b0/0"
-									src="img/0_010.jpg" width="100%"></a></li>
-							<li id="item5" data-rid="5"
-								style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(-100%); backface-visibility: hidden;"><a
-								href="http://cpgame.qd.game.qidian.com/Home/Index/directLogin/name/gs/way/1?qd_game_key=gs748x298&amp;qd_dd_p1=1075"
-								target="_blank" data-eid="qd_A89" data-qd_dd_p1="1"><img
-									class="load"
-									data-src=" //qidian.qpic.cn/qidian_common/349573/7325f2e9e6ee37189a90cbe89ad25318/0"
-									src="img/0.jpg" width="100%"></a><span class="op-tag"></span></li>
-						</ul>
-						<div class="thumb lbf-button-group nav" id="thumb">
-							<a href="#item1" class="lbf-button" data-eid="qd_A185"><span></span>替天行盗</a><a
-								href="#item2" class="lbf-button active" data-eid="qd_A186">莽穿新世界</a><a
-								href="#item3" class="lbf-button" data-eid="qd_A187">抗战之还我河山</a><a
-								href="#item4" class="lbf-button" data-eid="qd_A188">神级剑魂系统</a><a
-								href="#item5" class="lbf-button game-link" target="_blank"
-								data-eid="qd_A189"><em class="iconfont yxtd"></em>做玛法主宰者</a>
+						<div id="myCarousel" class="carousel slide"
+							style="width: 748px; height: 298px;">
+							<!-- 轮播（Carousel）指标 -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+								<li data-target="#myCarousel" data-slide-to="3"></li>
+								<li data-target="#myCarousel" data-slide-to="4"></li>
+							</ol>
+
+							<!-- 轮播（Carousel）项目 -->
+							<div class="carousel-inner">
+								<div class="item active">
+									<img src="http://manager.lxh.com/images/novel/1.jpg"
+										alt="First slide">
+								</div>
+								<div class="item">
+									<img src="http://manager.lxh.com/images/novel/2.jpg"
+										alt="Second slide">
+								</div>
+								<div class="item">
+									<img src="http://manager.lxh.com/images/novel/3.jpg"
+										alt="Third slide">
+								</div>
+								<div class="item">
+									<img src="http://manager.lxh.com/images/novel/4.jpg"
+										alt="Third slide">
+								</div>
+								<div class="item">
+									<img src="http://manager.lxh.com/images/novel/6.jpg"
+										alt="Third slide">
+								</div>
+							</div>
+
+							<a class="carousel-control left" href="#myCarousel"
+								data-slide="prev">‹</a> <a class="carousel-control right"
+								href="#myCarousel" data-slide="next">›</a>
 						</div>
+
 					</div>
 				</div>
 				<div class="focus-img cf">
@@ -498,10 +489,7 @@
 						href="https://www.qidian.com/news/index" target="_blank"
 						data-eid="qd_A190"><em class="dib-wrap point"><span></span><span></span><span></span></em><i
 						style="top: -18px; right: -18px;"></i></a>
-					<h3>
-						<a href="https://acts.qidian.com/2017/6015093/index.html"
-							target="_blank" data-eid="qd_A93">历史脑洞风暴征文</a>
-					</h3>
+				
 					<div class="notice-list">
 						<ul>
 							<li class="color-type_0" data-rid="1"><a
@@ -758,8 +746,7 @@
 									style="width: 93px; height: 136.4px; top: 0px; right: 0px; opacity: 1; z-index: 6; display: block;">
 									<a href="https://book.qidian.com/info/1010191960"
 										data-eid="qd_A107" data-bid="1010191960" target="_blank"><img
-										src="img.jpg"
-										title="大王饶命" alt="大王饶命"
+										src="img.jpg" title="大王饶命" alt="大王饶命"
 										style="width: 93px; height: 124px; display: inline-block;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -775,8 +762,7 @@
 									style="width: 74.4px; height: 109.12px; top: 12.4px; right: -44.64px; opacity: 1; z-index: 5; display: block;">
 									<a href="https://book.qidian.com/info/1003667321"
 										data-eid="qd_A107" data-bid="1003667321" target="_blank"><img
-										src="img/90_008.jpg"
-										title="美食供应商" alt="美食供应商"
+										src="img/90_008.jpg" title="美食供应商" alt="美食供应商"
 										style="width: 74.4px; height: 99.2px;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -792,8 +778,7 @@
 									style="width: 59.52px; height: 87.296px; top: 22.32px; right: -80.352px; opacity: 1; z-index: 4; display: block;">
 									<a href="https://book.qidian.com/info/1004600274"
 										data-eid="qd_A107" data-bid="1004600274" target="_blank"><img
-										src="img/90_005.jpg"
-										title="悟空看私聊" alt="悟空看私聊"
+										src="img/90_005.jpg" title="悟空看私聊" alt="悟空看私聊"
 										style="width: 59.52px; height: 79.36px; display: inline-block;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -809,8 +794,7 @@
 									style="width: 47.616px; height: 69.8368px; top: 30.256px; right: -108.922px; opacity: 0; z-index: 3; display: none;">
 									<a href="https://book.qidian.com/info/1004185492"
 										data-eid="qd_A107" data-bid="1004185492" target="_blank"><img
-										src="img/90.jpg"
-										title="带着仓库到大明" alt="带着仓库到大明"
+										src="img/90.jpg" title="带着仓库到大明" alt="带着仓库到大明"
 										style="width: 47.616px; height: 63.488px; display: inline-block;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -826,8 +810,7 @@
 									style="width: 47.616px; height: 69.8368px; top: 30.256px; right: 154.306px; opacity: 0; z-index: 3; display: none;">
 									<a href="https://book.qidian.com/info/1010256698"
 										data-eid="qd_A107" data-bid="1010256698" target="_blank"><img
-										src="img/90_016.jpg"
-										title="位面之纨绔生涯" alt="位面之纨绔生涯"
+										src="img/90_016.jpg" title="位面之纨绔生涯" alt="位面之纨绔生涯"
 										style="width: 47.616px; height: 63.488px; display: inline-block;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -843,8 +826,7 @@
 									style="width: 59.52px; height: 87.296px; top: 22.32px; right: 113.832px; opacity: 1; z-index: 4; display: block;">
 									<a href="https://book.qidian.com/info/1005395194"
 										data-eid="qd_A107" data-bid="1005395194" target="_blank"><img
-										src="img/90_017.jpg"
-										title="仙藏" alt="仙藏"
+										src="img/90_017.jpg" title="仙藏" alt="仙藏"
 										style="width: 59.52px; height: 79.36px; display: inline-block;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -860,8 +842,7 @@
 									style="width: 74.4px; height: 109.12px; top: 12.4px; right: 63.24px; opacity: 1; z-index: 5; display: block;">
 									<a href="https://book.qidian.com/info/1040809"
 										data-eid="qd_A107" data-bid="1040809" target="_blank"><img
-										src="img/90_003.jpg"
-										title="暗黑破坏神之毁灭" alt="暗黑破坏神之毁灭"
+										src="img/90_003.jpg" title="暗黑破坏神之毁灭" alt="暗黑破坏神之毁灭"
 										style="width: 74.4px; height: 99.2px; display: inline-block;"></a>
 									<div class="shadow"
 										style="width: 93px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: medium none; overflow: hidden; left: 0px; bottom: 0px;">
@@ -977,21 +958,18 @@
 						<li data-rid="1"><h3>
 								<a href="https://book.qidian.com/info/1009514754"
 									data-eid="qd_A110" data-bid="1009514754" target="_blank">我要做好莱坞巨星！</a>
-							</h3>
-							<em class="total"><cite>51,609</cite><i>人在追</i></em>
-						<p>我要躺在钞票堆里打滚！我要做好莱坞巨星！</p></li>
+							</h3> <em class="total"><cite>51,609</cite><i>人在追</i></em>
+							<p>我要躺在钞票堆里打滚！我要做好莱坞巨星！</p></li>
 						<li data-rid="2"><h3>
 								<a href="https://book.qidian.com/info/1010378782"
 									data-eid="qd_A110" data-bid="1010378782" target="_blank">一家神奇的铁匠铺</a>
-							</h3>
-							<em class="total"><cite>14,377</cite><i>人在追</i></em>
-						<p>修真界，有一家神奇的铁匠铺，它的每件作品，都能引起全世界的追逐……</p></li>
+							</h3> <em class="total"><cite>14,377</cite><i>人在追</i></em>
+							<p>修真界，有一家神奇的铁匠铺，它的每件作品，都能引起全世界的追逐……</p></li>
 						<li data-rid="3"><h3>
 								<a href="https://book.qidian.com/info/1010076307"
 									data-eid="qd_A110" data-bid="1010076307" target="_blank">武道与科技的结合</a>
-							</h3>
-							<em class="total"><cite>13,925</cite><i>人在追</i></em>
-						<p>当江湖不再局限于一城一国，当武道文明发展成宇宙各次元文明，竞争便就此展开</p></li>
+							</h3> <em class="total"><cite>13,925</cite><i>人在追</i></em>
+							<p>当江湖不再局限于一城一国，当武道文明发展成宇宙各次元文明，竞争便就此展开</p></li>
 					</ul>
 					<div class="rel">
 						<p class="line"></p>
@@ -1000,21 +978,18 @@
 						<li data-rid="4"><h3>
 								<a href="https://book.qidian.com/info/1003422010"
 									data-eid="qd_A110" data-bid="1003422010" target="_blank">神级机械猎人传奇</a>
-							</h3>
-							<em class="total"><cite>108,433</cite><i>人在追</i></em>
-						<p>看我带着飞机头，蜘蛛坦克，死神4000，速刷副本，虐杀BOSS！</p></li>
+							</h3> <em class="total"><cite>108,433</cite><i>人在追</i></em>
+							<p>看我带着飞机头，蜘蛛坦克，死神4000，速刷副本，虐杀BOSS！</p></li>
 						<li data-rid="5"><h3>
 								<a href="https://book.qidian.com/info/1010303740"
 									data-eid="qd_A110" data-bid="1010303740" target="_blank">一切从贞子开始：爬出来累不</a>
-							</h3>
-							<em class="total"><cite>45,831</cite><i>人在追</i></em>
-						<p>热烈的挥舞着小手，对电视里钻出的厉鬼说，贞子你好</p></li>
+							</h3> <em class="total"><cite>45,831</cite><i>人在追</i></em>
+							<p>热烈的挥舞着小手，对电视里钻出的厉鬼说，贞子你好</p></li>
 						<li data-rid="6"><h3>
 								<a href="https://book.qidian.com/info/1005276026"
 									data-eid="qd_A110" data-bid="1005276026" target="_blank">寒门枭士改写北宋</a>
-							</h3>
-							<em class="total"><cite>58,375</cite><i>人在追</i></em>
-						<p>当金兵的铁蹄即将踏碎黄河坚冰，他走进了这个繁华如清明上河图的时代。</p></li>
+							</h3> <em class="total"><cite>58,375</cite><i>人在追</i></em>
+							<p>当金兵的铁蹄即将踏碎黄河坚冰，他走进了这个繁华如清明上河图的时代。</p></li>
 					</ul>
 					<div class="edit-rec-img-list cf" data-l2="3">
 						<ul>
@@ -1029,8 +1004,7 @@
 									<div class="book-img">
 										<a href="https://book.qidian.com/info/1010691914"
 											target="_blank" data-eid="qd_A171" data-bid="1009514754"><img
-											class="lazy"
-											src="img/default_book.png"
+											class="lazy" src="img/default_book.png"
 											data-original="//qidian.qpic.cn/qdbimg/349573/1010691914/90"
 											alt="机甲定制大师"></a>
 									</div>
@@ -1046,8 +1020,7 @@
 									<div class="book-img">
 										<a href="https://book.qidian.com/info/1010496369"
 											target="_blank" data-eid="qd_A171" data-bid="1010378782"><img
-											class="lazy"
-											src="png/default_book.png"
+											class="lazy" src="png/default_book.png"
 											data-original="//qidian.qpic.cn/qdbimg/349573/1010496369/90"
 											alt="大道朝天"></a>
 									</div>
@@ -1183,8 +1156,7 @@
 			<a
 				href="http://cpgame.qd.game.qidian.com/Home/Index/directLogin/name/jyyx/way/1?qd_game_key=jyyx1200x100s&amp;qd_dd_p1=415"
 				target="_blank" data-eid="qd_A116" data-qd_dd_p1="1"
-				style="display: inline;"><img
-				src="img/0_011.jpg"><span
+				style="display: inline;"><img src="img/0_011.jpg"><span
 				class="op-tag"></span></a><a href="javascript:" target="_blank"
 				data-eid="qd_A116" data-qd_dd_p1="1"><span class="op-tag"></span></a>
 		</div>
@@ -1220,8 +1192,7 @@
 											<a class="link"
 												href="https://book.qidian.com/info/1010468795"
 												data-eid="qd_A117" target="_blank" data-bid="1010468795"><img
-												src="img/90_004.jpg"
-												alt="飞剑问道"></a><span></span>
+												src="img/90_004.jpg" alt="飞剑问道"></a><span></span>
 										</div>
 									</div></li>
 								<li data-rid="2"><div class="num-box">
@@ -1366,8 +1337,7 @@
 											<a class="link"
 												href="https://book.qidian.com/info/1004608738"
 												data-eid="qd_A117" target="_blank" data-bid="1004608738"><img
-												src="img/90_007.jpg"
-												alt="圣墟"></a><span></span>
+												src="img/90_007.jpg" alt="圣墟"></a><span></span>
 										</div>
 									</div></li>
 								<li data-rid="2"><div class="num-box">
@@ -1514,8 +1484,7 @@
 											<a class="link"
 												href="https://book.qidian.com/info/1010468795"
 												data-eid="qd_A117" target="_blank" data-bid="1010468795"><img
-												src="img/90_004.jpg"
-												alt="飞剑问道"></a><span></span>
+												src="img/90_004.jpg" alt="飞剑问道"></a><span></span>
 										</div>
 									</div></li>
 								<li data-rid="2"><div class="num-box">
@@ -1661,8 +1630,7 @@
 											<a class="link"
 												href="https://book.qidian.com/info/1010468795"
 												target="_blank" data-eid="qd_A117" data-bid="1010468795"><img
-												src="img/90_004.jpg"
-												alt="飞剑问道"></a><span></span>
+												src="img/90_004.jpg" alt="飞剑问道"></a><span></span>
 										</div>
 									</div></li>
 								<li data-rid="2"><div class="num-box">
@@ -1809,8 +1777,7 @@
 											<a class="link"
 												href="https://book.qidian.com/info/1010734492"
 												target="_blank" data-eid="qd_A117" data-bid="1010734492"><img
-												src="img/90_013.jpg"
-												alt="凡人修仙之仙界篇"></a><span></span>
+												src="img/90_013.jpg" alt="凡人修仙之仙界篇"></a><span></span>
 										</div>
 									</div></li>
 								<li data-rid="2"><div class="num-box">
@@ -1936,10 +1903,10 @@
 		<div class="banner-wrap box-center mb40" id="banner3" data-l1="32">
 			<a href="https://activity.qidian.com/2017/60200000/index"
 				target="_blank" data-eid="qd_A120" style="display: inline;"><img
-				src="img/0_006.jpg"></a><a
-				href="javascript:" target="_blank" data-eid="qd_A120"></a>
+				src="img/0_006.jpg"></a><a href="javascript:" target="_blank"
+				data-eid="qd_A120"></a>
 		</div>
-		
+
 		<div class="filter-search-wrap" data-l1="21">
 			<div class="box-center cf">
 				<div class="filter-search-box fl">
@@ -2063,7 +2030,7 @@
 				<ul>
 					<li class="site"><a class="pin-logo"
 						href="https://www.qidian.com/" data-eid="qd_A43"><span></span></a>
-					<div class="dropdown">
+						<div class="dropdown">
 							<a href="https://www.qdmm.com/" target="" data-eid="qd_A44">起点女生网</a><a
 								href="http://chuangshi.qq.com/" target="" data-eid="qd_A45">创世中文网</a><a
 								href="http://yunqi.qq.com/" target="" data-eid="qd_A46">云起书院</a>
@@ -2084,7 +2051,7 @@
 						data-eid="qd_A53">排行</a></li>
 					<li class="more"><a href="javascript:" id="top-nav-more"
 						target="" data-eid="qd_A54">更多<span></span></a>
-					<div class="dropdown">
+						<div class="dropdown">
 							<a href="https://www.qidian.com/all" target="_blank"
 								data-eid="qd_A169">全部作品</a><a href="https://www.qidian.com/2cy"
 								target="" data-eid="qd_A55">二次元</a><a
@@ -2118,7 +2085,7 @@
 					<li class="sign-in hidden"><a
 						href="https://me.qidian.com/Index.aspx" target="_blank"
 						data-eid="qd_A65"><i id="nav-user-name"></i><span></span></a>
-					<div class="dropdown">
+						<div class="dropdown">
 							<a href="https://me.qidian.com/msg/lists.aspx?page=1"
 								target="_blank" data-eid="qd_A66">消息(<i id="top-msg">0</i>)
 							</a><a href="https://www.qidian.com/charge/meRedirect"
@@ -2203,8 +2170,7 @@ adBanner4:[{"title":"","adImgUrl":"//qidian.qpic.cn/qidian_common/349573
         g_data.domainPreFix = '';
     //静态资源域名
     g_data.staticPath = '//qidian.gtimg.com/qd';</script>
-	<script data-ignore="true"
-		src="js/LBF.js"></script>
+	<script data-ignore="true" src="js/LBF.js"></script>
 	<script>//
  LBF 配置
     
@@ -2310,7 +2276,7 @@ http://isdspeed.qq.com/cgi-bin/r.cgi?flag1=7718&flag2=224&flag3=1&1=38&2=38&…
 			<li class="lbf-combobox-option"><a class="lbf-combobox-item"
 				href="javascript:;" onclick="return false;" data-value="0">连载</a></li>
 			<li class="lbf-combobox-option"><a class="lbf-combobox-item"
-				href="javascript:;" onclick="return false;" data-value="1">完本<4/a></li>
+				href="javascript:;" onclick="return false;" data-value="1">完本</a></li>
 		</ul>
 	</div>
 	<div class="lbf-popup lbf-dropdown lbf-combobox-panel"
@@ -2370,5 +2336,12 @@ http://isdspeed.qq.com/cgi-bin/r.cgi?flag1=7718&flag2=224&flag3=1&1=38&2=38&…
 				href="javascript:;" onclick="return false;" data-value="鉴宝">鉴宝</a></li>
 		</ul>
 	</div>
+	<script>
+	$(function(){
+	
+			$("#myCarousel").carousel('cycle');
+		
+	});
+</script>
 </body>
 </html>

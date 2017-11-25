@@ -22,7 +22,7 @@
         <button onclick="up()" class="easyui-linkbutton" data-options="iconCls:'icon-up',plain:true">上架</button>
     </div>
 </div>
-<table id="dg" ></table>
+<table id="cat" ></table>
 <script>
     //模糊查询
     function searchForm(){
@@ -171,7 +171,7 @@
             }
         });
     }
-    $("#dg").datagrid({
+    $("#cat").datagrid({
         url:"bookcats",
         multiSort:true,
         toolbar: '#toolbar',

@@ -22,7 +22,7 @@
         <button onclick="up()" class="easyui-linkbutton" data-options="iconCls:'icon-up',plain:true">活跃</button>
     </div>
 </div>
-<table id="dg" ></table>
+<table id="dg3" ></table>
 <script>
     //模糊查询
     function searchForm(){
@@ -168,7 +168,7 @@
             }
         });
     }
-    $("#dg").datagrid({
+    $("#dg3").datagrid({
         url:"authors",
         multiSort:true,
         toolbar: '#toolbar',
