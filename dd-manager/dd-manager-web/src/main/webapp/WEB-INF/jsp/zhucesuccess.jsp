@@ -7,13 +7,38 @@
     <title>账号注册_起点中文网_阅文集团旗下网站</title>
     <link rel="stylesheet" type="text/css" href="css/pact.css"/>
     <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+    <script type="text/javascript">
+        var interval;
+
+        function startSecond() {
+
+            interval = window.setInterval("changeSecond()", 1000);
+
+        };
+
+        function changeSecond() {
+            var second = document.getElementById("jumpTime");
+
+            var svalue = second.innerHTML;
+
+            svalue = svalue - 1;
+
+            if (svalue == 0) {
+                window.clearInterval(interval);
+                location.href = "${pageContext.request.contextPath}/";
+                return;
+            }
+
+            second.innerHTML = svalue;
+        }
+    </script>
 </head>
-<body>
+<body onload="startSecond()">
 <div class="wrap">
     <!-- start 头部 -->
     <div class="header reg-header qidian">
         <div class="box-center">
-            <div class="logo cf"><a href="#" ><img src="images/log.png"></a><em></em><span class="lang">用户注册</span></div>
+            <div class="logo cf"><a href="#" ><img src="img/logo-qf.png"></a><em></em><span class="lang">用户注册</span></div>
         </div>
     </div>
     <!-- end 头部 -->
@@ -30,10 +55,10 @@
                     <h3>注册成功</h3>
                     <div class="sprite ok"></div>
                     <p>你的账号：</p>
-                    <h4 class="red">13867994047</h4>
+                    <h4 class="red">${userName}</h4>
                     <p>90%的书友会设置安全认证，抵御盗号风险</p>
                     <p><a class="blue" href="http://anquan.qidian.com">前往安全中心</a></p>
-                    <p><span class="red" id="jumpTime">7</span>秒后跳转</p>
+                    <p><span class="red" id="jumpTime">10</span>秒后跳转</p>
                 </div>
             </div>
             <!-- end 注册进度 -->
