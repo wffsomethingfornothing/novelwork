@@ -20,4 +20,7 @@ public interface ReaderService {
 
 
     int addReader(NReader reader,Model model);
+
+
+    NReader selectReader(Long rid, Model model);
 }

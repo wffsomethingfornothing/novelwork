@@ -4,6 +4,7 @@ import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
 import com.qf.novel.dao.NOrderCustomMapper;
 import com.qf.novel.dao.NOrderMapper;
+import com.qf.novel.dao.NWebOrderCustomMapper;
 import com.qf.novel.pojo.po.NOrder;
 import com.qf.novel.pojo.po.NOrderExample;
 import com.qf.novel.pojo.vo.NOrderCustom;
@@ -29,6 +30,8 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private NOrderCustomMapper orderCustomDao;
     @Autowired
+    private NWebOrderCustomMapper webOrderCustomDao;
+    @Autowired
     private NOrderMapper nOrderMapper;
 
     @Override
@@ -42,6 +45,27 @@ public class OrderServiceImpl implements OrderService {
             result = new Result<NOrderCustom>();
             result.setTotal(orderCustomDao.countOrders(map));
             result.setRows(orderCustomDao.listOrdersByPage(map));
+
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
+    public Result<NOrderCustom> weblistOrdersByPage(Page page, NOrder nOrder, NOrderQuery nOrderQuery, Long rid) {
+        Result<NOrderCustom> result = null;
+        try{
+            Map<String,Object> map = new HashMap<String,Object>();
+            map.put("page",page);
+            map.put("nOrder", nOrder);
+            map.put("nOrderQuery", nOrderQuery);
+            map.put("webid",rid);
+            //System.out.println(map.get("webid"));
+            result = new Result<NOrderCustom>();
+            result.setTotal(webOrderCustomDao.countOrders(map));
+            result.setRows(webOrderCustomDao.listOrdersByPage(map));
 
         }catch (Exception e){
             logger.error(e.getMessage(),e);

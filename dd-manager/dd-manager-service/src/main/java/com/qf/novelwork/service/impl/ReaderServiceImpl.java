@@ -109,4 +109,14 @@ public class ReaderServiceImpl implements ReaderService {
         }
         return i;
     }
+
+    @Override
+    public NReader selectReader(Long rid, Model model) {
+        NReaderExample example = new NReaderExample();
+        NReaderExample.Criteria criteria = example.createCriteria();
+        criteria.andIdEqualTo(rid);
+        List<NReader> nReaders = nReaderDao.selectByExample(example);
+        model.addAttribute("minecenterReader",nReaders.get(0));
+        return null;
+    }
 }
