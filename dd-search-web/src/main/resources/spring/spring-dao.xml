@@ -39,6 +39,6 @@
         <property name="basePackage" value="com.qf.novel.dao"/>
     </bean>
     <!--5 扫描DAO层下注解类,可以扫描到base-package的当前包以及子包的所有注解类-->
-    <context:component-scan base-package="com.qf.novel."/>
+    <context:component-scan base-package="com.qf.novel.dao"/>
 
 </beans>
