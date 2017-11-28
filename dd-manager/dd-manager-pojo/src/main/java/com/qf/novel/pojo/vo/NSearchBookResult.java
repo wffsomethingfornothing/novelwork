@@ -13,9 +13,10 @@ public class NSearchBookResult {
 
     private long recordCount;
 
-
     private int totalPages;
+
     private List<NBookSearchCustom> bookList;
+
 
     public long getRecordCount() {
         return recordCount;

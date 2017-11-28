@@ -11,8 +11,53 @@ public class NBookSearchCustom {
     private String title;
     private String readPoint;
     private long score;
+    private long count;//字数
     private String image;
-    private String catName;
+    private String authorName;//作者姓名;
+    private String catName;//具体分类
+    private String catParentName;//分类
+    private int status;//1.连载  2.完结
+    private int attribute;//1.免费  2.VIP
+
+    public long getCount() {
+        return count;
+    }
+
+    public void setCount(long count) {
+        this.count = count;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public int getAttribute() {
+        return attribute;
+    }
+
+    public void setAttribute(int attribute) {
+        this.attribute = attribute;
+    }
+
+    public String getCatParentName() {
+        return catParentName;
+    }
+
+    public void setCatParentName(String catParentName) {
+        this.catParentName = catParentName;
+    }
 
     public String getId() {
         return id;
