@@ -4,12 +4,18 @@
     <file type="web" url="file://$PROJECT_DIR$/dd-manager/dd-manager-web" />
     <file type="web" url="file://$PROJECT_DIR$/dd-portal-web" />
     <file type="web" url="file://$PROJECT_DIR$/dd-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/dd-sso-web" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/dd-parent/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/dd-search-web/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">

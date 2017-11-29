@@ -1,27 +1,26 @@
+/*
 package com.qf.novelwork.search.web;
 
 
 import com.qf.novel.pojo.vo.TbSearchItemResult;
-import com.qf.novel.service.SearchItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+*/
 /**
  * User: DHC
  * Date: 2017/11/22
  * Time: 15:40
  * Version:V1.0
- */
+ *//*
+
 @Controller
 public class SearchIndexAction {
 
-    @Autowired
-    private SearchItemService searchItemService;
 
-    @RequestMapping("/")
     public String portalIndex(String keyword,
                               @RequestParam(defaultValue = "1") Integer page, Model model) throws Exception {
         System.out.println("----------------------------------=");
@@ -43,3 +42,4 @@ public class SearchIndexAction {
         return "index";
     }
 }
+*/

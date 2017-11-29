@@ -12,6 +12,7 @@
         <module>../dd-manager</module>
         <module>../dd-portal-web</module>
         <module>../dd-search-web</module>
+        <module>../dd-sso-web</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -13,7 +13,7 @@
         <module name="dd-manager-service" />
         <module name="dd-manager-web" />
         <module name="dd-portal-web" />
-        <module name="dd-search-web" />
+        <module name="dd-sso-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +27,7 @@
       <module name="dd-parent" target="1.8" />
       <module name="dd-portal-web" target="1.8" />
       <module name="dd-search-web" target="1.8" />
+      <module name="dd-sso-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
