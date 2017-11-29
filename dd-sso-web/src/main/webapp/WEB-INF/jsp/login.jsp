@@ -87,7 +87,7 @@
 														data-off-stat="qd_L05|取消自动登录|2"></label><label
 														for="autologin">自动登录</label>
 												</div>
-												<input class="red-btn go-login"
+												<input class="red-btn go-login" style="cursor: pointer;"
 													type="submit" value="登录"></input>
 											</div>
 											</form>
@@ -151,7 +151,7 @@
                                                 "user/token1/"+token+"",
                                                 function (mess) {
                                                     var reader = mess.data.username;
-                                                location.href = "http://localhost:8081/novelwork/readerIndex?username="+reader+"";
+                                                location.href = "http://localhost:8081/novelwork/"+reader+"";
 
                                                 }
                                             );

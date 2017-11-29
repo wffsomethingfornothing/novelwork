@@ -6,11 +6,9 @@ import java.util.List;
 
 /**
  * User: LXH
- * Date: 2017/11/24 0024
- * Time: 17:53
+ * Date: 2017/11/29 0029
+ * Time: 17:04
  */
 public interface ContentService {
-
-
     List<NContent> listContentsByCid(Long id);
 }

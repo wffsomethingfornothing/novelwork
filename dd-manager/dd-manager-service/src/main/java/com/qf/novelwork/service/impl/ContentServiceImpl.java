@@ -15,13 +15,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * User: LXH
- * Date: 2017/11/24 0024
- * Time: 17:54
+ * User: DHC
+ * Date: 2017/11/20
+ * Time: 15:29
+ * Version:V1.0
  */
 @Service
-public class ContentServiceImpl implements ContentService{
-
+public class ContentServiceImpl implements ContentService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private NContentMapper contentDao;
@@ -46,7 +46,6 @@ public class ContentServiceImpl implements ContentService{
         NContentExample example = new NContentExample();
         NContentExample.Criteria criteria = example.createCriteria();
         criteria.andCidEqualTo(id);
-
         //执行查询
         list = contentDao.selectByExample(example);
 
@@ -58,6 +57,5 @@ public class ContentServiceImpl implements ContentService{
             e.printStackTrace();
         }
         return list;
-
     }
 }

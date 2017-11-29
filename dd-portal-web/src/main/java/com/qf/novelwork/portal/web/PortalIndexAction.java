@@ -9,11 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -29,13 +24,10 @@ public class PortalIndexAction {
     private ContentService contentService;
 
 
-    @RequestMapping("/")
-    public String portalIndex(Model model, HttpServletRequest request){
-        //第一步：使用service去查，根据tb_content_category的ID去查
-        Long id = PropKit.use("ftp.properties").getLong("ftp.gallery");
-        List<NContent> list = contentService.listContentsByCid(id);
-        //第二步：存放到model中
-        model.addAttribute("ad1List", list);
+    @RequestMapping("/{username}")
+    public String portalIndex(@PathVariable("username") String username, Model model){
+
+        model.addAttribute("username", username);
 
         /*String tokenId = "";
 
@@ -51,11 +43,16 @@ public class PortalIndexAction {
         return "portalIndex";
     }
 
-    @RequestMapping("/readerIndex")
-    public String index(@RequestParam("username") String username, Model model){
+    @RequestMapping("/")
+    public String index(Model model){
 
-        model.addAttribute("username", username);
-
+        //第一步：使用service去查，根据tb_content_category的ID去查
+        Long id = PropKit.use("ftp.properties").getLong("ftp.gall");
+        List<NContent> list = contentService.listContentsByCid(id);
+        //第二步：存放到model中
+        model.addAttribute("ad1List", list);
+        System.out.println(list);
+        //第三步：返回首页
         return "portalIndex";
     }
 

@@ -13,6 +13,7 @@
         <module name="dd-manager-service" />
         <module name="dd-manager-web" />
         <module name="dd-portal-web" />
+        <module name="dd-search-web" />
         <module name="dd-sso-web" />
       </profile>
     </annotationProcessing>

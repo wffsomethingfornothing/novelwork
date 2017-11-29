@@ -121,9 +121,11 @@
 				</cite></a><em>|</em><a id="exit-btn" href="javascript:" data-eid="qd_A10">退出</a>
 				</div>
 				<div class="sign-out">
+					<%--存放登录名--%>
+					<input type="hidden" id="username" value="${username}">
 					<c:if test="${!empty username}"><a id="login-btn" class="black"
 					   data-eid="qd_A06">欢迎您,${username}</a></c:if>
-					<c:if test="${empty username}"><a id="login-btn" class="black" href="javascript:"
+					<c:if test="${empty username}"><a id="login-btn" class="black" href="http://localhost:8083/novelwork"
 																   data-eid="qd_A06">登录</a></c:if><em>|</em><a id="reg-btn"
 															href="https://passport.qidian.com/reg.html?appid=10&amp;areaid=1&amp;target=iframe&amp;ticket=1&amp;auto=1&amp;autotime=30&amp;returnUrl=https%3A%2F%2Fwww.qidian.com"
 															target="_blank" data-eid="qd_A07">注册</a>
@@ -159,7 +161,7 @@
 	<div class="logo-wrap box-center" data-l1="2">
 		<div class="box-center cf">
 			<div class="book-shelf fr">
-				<a href="https://me.qidian.com/bookCase/bookCase.aspx?caseId=-2"
+				<a onclick="bookCase()" style="cursor: pointer;"
 				   target="_blank" data-eid="qd_A14" id="numero2"><i>我的书架</i></a>
 			</div>
 			<div class="logo fl">
@@ -442,9 +444,54 @@
 				<div class="lbf-slides switchable-slides" id="switchable-slides">
 					<a href="https://www.qidian.com/book/coverrec"
 					   target="_blank" data-eid="qd_A173"><i><em></em><em></em><em></em></i></a>
+
+
+					<%--<ul>
+						<li id="item1" data-rid="1"
+							style="transition: transform 300ms linear 0s; backface-visibility: hidden; transform: translateX(-100%);"><a
+								href="https://book.qidian.com/info/1004650252" target="_blank"
+								data-eid="qd_A85"><img src="http://101.132.66.226/images/novel/1.jpg" width="100%"></a></li>
+						<li id="item2" data-rid="2"
+							style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(0%); backface-visibility: hidden;"><a
+								href="https://book.qidian.com/info/1009644207" target="_blank"
+								data-eid="qd_A86"><img class="load"
+													   data-src=" //qidian.qpic.cn/qidian_common/349573/c1da48f6927aa7d461329a9cd2076624/0"
+													   src="http://101.132.66.226/images/novel/2.jpg" width="100%"></a></li>
+						<li id="item3" data-rid="3"
+							style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(-100%); backface-visibility: hidden;"><a
+								href="https://book.qidian.com/info/1007103215" target="_blank"
+								data-eid="qd_A87"><img class="load"
+													   data-src=" //qidian.qpic.cn/qidian_common/349573/f7f4d3f724bdea87d7856129415971b8/0"
+													   src="http://101.132.66.226/images/novel/3.jpg" width="100%"></a></li>
+						<li id="item4" data-rid="4"
+							style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(-100%); backface-visibility: hidden;"><a
+								href="https://book.qidian.com/info/1005235019" target="_blank"
+								data-eid="qd_A88"><img class="load"
+													   data-src=" //qidian.qpic.cn/qidian_common/349573/1dd0a31c5736594eb96c5568f1ef64b0/0"
+													   src="http://101.132.66.226/images/novel/4.jpg" width="100%"></a></li>
+						<li id="item5" data-rid="5"
+							style="display: list-item; transition: transform 300ms linear 0s; transform: translateX(-100%); backface-visibility: hidden;"><a
+								href="http://cpgame.qd.game.qidian.com/Home/Index/directLogin/name/gs/way/1?qd_game_key=gs748x298&amp;qd_dd_p1=1075"
+								target="_blank" data-eid="qd_A89" data-qd_dd_p1="1"><img
+								class="load"
+								data-src=" //qidian.qpic.cn/qidian_common/349573/7325f2e9e6ee37189a90cbe89ad25318/0"
+								src="http://101.132.66.226/images/novel/5.jpg" width="100%"></a><span class="op-tag"></span></li>
+					</ul>
+
+					<div class="thumb lbf-button-group nav" id="thumb">
+						<a href="#item1" class="lbf-button" data-eid="qd_A185"><span></span>替天行盗</a><a
+							href="#item2" class="lbf-button active" data-eid="qd_A186">莽穿新世界</a><a
+							href="#item3" class="lbf-button" data-eid="qd_A187">抗战之还我河山</a><a
+							href="#item4" class="lbf-button" data-eid="qd_A188">神级剑魂系统</a><a
+							href="#item5" class="lbf-button game-link" target="_blank"
+							data-eid="qd_A189"><em class="iconfont yxtd"></em>做玛法主宰者</a>
+					</div>--%>
+
+
+
+					<%--轮播图模块--%>
 					<div id="myCarousel" class="carousel slide"
 						 style="width: 748px; height: 298px;">
-						<!-- 轮播（Carousel）指标 -->
 						<ol class="carousel-indicators">
 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 							<li data-target="#myCarousel" data-slide-to="1"></li>
@@ -453,7 +500,7 @@
 							<li data-target="#myCarousel" data-slide-to="4"></li>
 						</ol>
 
-						<!-- 轮播（Carousel）项目 -->
+
 						<div class="carousel-inner">
 							<div class="item active">
 								<img src="http://101.132.66.226/images/novel/1.jpg"
@@ -506,6 +553,7 @@
 				   href="https://www.qidian.com/news/index" target="_blank"
 				   data-eid="qd_A190"><em class="dib-wrap point"><span></span><span></span><span></span></em><i
 						style="top: -18px; right: -18px;"></i></a>
+
 
 				<div class="notice-list">
 					<ul>
@@ -2353,6 +2401,20 @@ speedTimer.push(new Date().getTime());</script>
 	</ul>
 </div>
 <script>
+
+
+	//我的书架
+	function bookCase() {
+        var username = $("#username").val();
+		if(username==null || username==""){
+        	location.href="http://localhost:8083/novelwork";
+        }else{
+            location.href="bookCase/"+username+"";
+        }
+
+    }
+
+
     $(function(){
 
         $("#myCarousel").carousel('cycle');
