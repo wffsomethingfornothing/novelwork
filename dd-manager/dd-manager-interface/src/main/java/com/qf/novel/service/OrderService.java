@@ -18,4 +18,6 @@ public interface OrderService {
     int updateorders(List<Long> ids);
 
     int saveorders(NOrder nOrder);
+
+    Result<NOrderCustom> weblistOrdersByPage(Page page, NOrder nOrder, NOrderQuery nOrderQuery, Long rid);
 }

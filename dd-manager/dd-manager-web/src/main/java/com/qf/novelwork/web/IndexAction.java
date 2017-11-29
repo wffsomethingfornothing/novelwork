@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -23,23 +22,6 @@ public class IndexAction {
     @RequestMapping("/")
     public String  index(){
         return "index";
-    }
-
-    @ResponseBody
-    @RequestMapping("/checkcode")
-    public String ajaxCheckCode(String code , HttpServletRequest request){
-        //获取验证码
-        String code1 = (String)request.getSession().getAttribute("checkcode_session");
-        String code_ = code;
-        //System.out.println(code1+"````"+code_);
-
-        if(!code1.equals(code_)){
-            return "0";
-        }else{
-            return "1";
-        }
-
-
     }
 
     @RequestMapping("/{page}")
@@ -63,6 +45,12 @@ public class IndexAction {
             mess="3";
         }
         return mess;
+    }
+
+    @RequestMapping("/zhuce")
+    public String doZhuce(){
+        //session.removeAttribute("sessionAdmin");
+        return "u_zhuce";
     }
 
     @RequestMapping("/logout")

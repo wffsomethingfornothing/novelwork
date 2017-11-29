@@ -35,21 +35,20 @@
         <property name="blockWhenExhausted" value="false"/>
     </bean>
 
-    <!--
-        jedispool版本
-    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">-->
-        <!--<constructor-arg name="poolConfig" ref="jedisPoolConfig"/>-->
-        <!--<constructor-arg name="host" value="10.31.161.26"/>-->
-        <!--<constructor-arg name="port" value="6379"/>-->
-    <!--</bean>-->
+        <!--jedispool版本-->
+    <bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig"/>
+        <constructor-arg name="host" value="101.132.164.137"/>
+        <constructor-arg name="port" value="6379"/>
+    </bean>
 
-    <!--<bean id="jedisClientPool" class="com.dhc.common.jedis.JedisClientPool">-->
-        <!--<property name="jedisPool" ref="jedisPool"/>-->
-    <!--</bean>-->
+    <bean id="jedisClientPool" class="com.qf.novel.common.jedis.JedisClientPool">
+        <property name="jedisPool" ref="jedisPool"/>
+    </bean>
 
-    <!--集群版本-->
+    <!--集群版本
     <bean id="jedisCluster" class="redis.clients.jedis.JedisCluster">
-        <!--构造器注入-->
+        &lt;!&ndash;构造器注入&ndash;&gt;
         <constructor-arg name="nodes">
             <set>
                 <bean class="redis.clients.jedis.HostAndPort">
@@ -82,6 +81,6 @@
     </bean>
     <bean id="jedisClientCluster" class="com.qf.novel.common.jedis.JedisClientCluster">
         <property name="jedisCluster" ref="jedisCluster"/>
-    </bean>
+    </bean>-->
 
 </beans>

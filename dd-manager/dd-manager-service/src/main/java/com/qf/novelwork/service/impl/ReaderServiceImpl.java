@@ -3,14 +3,19 @@ package com.qf.novelwork.service.impl;
 import com.qf.novel.common.dto.Order;
 import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
+import com.qf.novel.common.util.IDUtils;
 import com.qf.novel.dao.NReaderCustomMapper;
 import com.qf.novel.dao.NReaderMapper;
 import com.qf.novel.pojo.po.NReader;
 import com.qf.novel.pojo.po.NReaderExample;
 import com.qf.novel.service.ReaderService;
+import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.Model;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -85,5 +90,33 @@ public class ReaderServiceImpl implements ReaderService {
         i = nReaderDao.updateByExampleSelective(record, example);
 
         return i;
+    }
+
+    @Transactional
+    @Override
+    public int addReader(NReader reader,Model model) {
+        int i = 0;
+        try {
+            long itemId = IDUtils.getItemId();
+            reader.setId(itemId);
+            reader.setUsername("用户"+itemId);
+            reader.setLevel(1);
+            reader.setState(1);
+            i = nReaderDao.insert(reader);
+            model.addAttribute("userName",reader.getUsername());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return i;
+    }
+
+    @Override
+    public NReader selectReader(Long rid, Model model) {
+        NReaderExample example = new NReaderExample();
+        NReaderExample.Criteria criteria = example.createCriteria();
+        criteria.andIdEqualTo(rid);
+        List<NReader> nReaders = nReaderDao.selectByExample(example);
+        model.addAttribute("minecenterReader",nReaders.get(0));
+        return null;
     }
 }

@@ -152,4 +152,25 @@ public class NReader {
     public void setUpdated(Date updated) {
         this.updated = updated;
     }
+
+    @Override
+    public String toString() {
+        return "NReader{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", sex='" + sex + '\'' +
+                ", birthday=" + birthday +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", level=" + level +
+                ", balance=" + balance +
+                ", tickets=" + tickets +
+                ", headphoto='" + headphoto + '\'' +
+                ", description='" + description + '\'' +
+                ", state=" + state +
+                ", created=" + created +
+                ", updated=" + updated +
+                '}';
+    }
 }
