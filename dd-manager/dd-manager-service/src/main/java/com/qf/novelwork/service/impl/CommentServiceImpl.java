@@ -4,7 +4,6 @@ import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
 import com.qf.novel.dao.NCommentCustomMapper;
 import com.qf.novel.dao.NReplyCustomMapper;
-import com.qf.novel.dao.NReplyMapper;
 import com.qf.novel.pojo.vo.CommentCustom;
 import com.qf.novel.pojo.vo.ReplyCustom;
 import com.qf.novel.service.ICommentService;
