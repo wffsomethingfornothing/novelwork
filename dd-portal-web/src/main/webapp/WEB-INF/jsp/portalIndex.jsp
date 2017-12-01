@@ -382,60 +382,60 @@
 			 data-l1="3">
 			<dl>
 				<dd>
-					<a href="https://www.qidian.com/xuanhuan" target="_blank"
-					   data-eid="qd_A71"><cite><span class="info"> <i class="iconfont">&#xe650;</i><i>玄幻${sessionScope.username}</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=1" target="_blank"
+					   data-eid="qd_A71"><cite><em style="background-image: url(img/90_002.jpg);height: 10px;"></em><span class="info">玄幻</span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/qihuan" target="_blank"
-					   data-eid="qd_A72"><cite><span class="info"><i class="iconfont">&#xe64c;</i><i>奇幻</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=2" target="_blank"
+					   data-eid="qd_A72"><cite><span class="info"><i>奇幻</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/wuxia" target="_blank"
-					   data-eid="qd_A73"><cite><span class="info"><i class="iconfont">&#xe603;</i><i>武侠</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=3"
+					   data-eid="qd_A73"><cite><span class="info"><i>武侠</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/xianxia" target="_blank"
-					   data-eid="qd_A74"><cite><span class="info"><i class="iconfont">&#xe61b;</i><i>仙侠</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=4" target="_blank"
+					   data-eid="qd_A74"><cite><span class="info"><i>仙侠</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/dushi" target="_blank"
-					   data-eid="qd_A75"><cite><span class="info"><i class="iconfont">&#xe601;</i><i>都市</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=5" target="_blank"
+					   data-eid="qd_A75"><cite><span class="info"><i>都市</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/xianshi" target="_blank"
-					   data-eid="qd_A76"><cite><span class="info"><i class="iconfont">&#xe606;</i><i>现实</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=6" target="_blank"
+					   data-eid="qd_A76"><cite><span class="info"><i>现实</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/junshi" target="_blank"
-					   data-eid="qd_A77"><cite><span class="info"><i class="iconfont">&#xe60d;</i><i>军事</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=7" target="_blank"
+					   data-eid="qd_A77"><cite><span class="info"><i>军事</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/lishi" target="_blank"
-					   data-eid="qd_A78"><cite><span class="info"><i class="iconfont">&#xe604;</i><i>历史</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=8" target="_blank"
+					   data-eid="qd_A78"><cite><span class="info"><i>历史</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/youxi" target="_blank"
-					   data-eid="qd_A79"><cite><span class="info"><i class="iconfont">&#xe680;</i><i>游戏</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=9" target="_blank"
+					   data-eid="qd_A79"><cite><span class="info"><i>游戏</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/tiyu" target="_blank"
-					   data-eid="qd_A80"><cite><span class="info"><i class="iconfont">&#xe60b;</i><i>体育</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=10" target="_blank"
+					   data-eid="qd_A80"><cite><span class="info"><i>体育</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/kehuan" target="_blank"
-					   data-eid="qd_A81"><cite><span class="info"><i class="iconfont">&#xe60e;</i><i>科幻</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=11" target="_blank"
+					   data-eid="qd_A81"><cite><span class="info"><i>科幻</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/lingyi" target="_blank"
-					   data-eid="qd_A82"><cite><span class="info"><i class="iconfont">&#xe605;</i><i>灵异</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=12" target="_blank"
+					   data-eid="qd_A82"><cite><span class="info"><i>灵异</i></span></cite></a>
 				</dd>
 				<dd>
 					<a href="https://www.qdmm.com/" target="_blank" data-eid="qd_A83"><cite><span
-							class="info"><i class="iconfont">&#xe654;</i><i>女生网</i></span></cite></a>
+							class="info"><i>女生网</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/2cy" target="_blank"
-					   data-eid="qd_A84"><cite><span class="info"><i class="iconfont">&#xe602;</i><i>二次元</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=13" target="_blank"
+					   data-eid="qd_A84"><cite><span class="info"><i>二次元</i></span></cite></a>
 				</dd>
 			</dl>
 		</div>
