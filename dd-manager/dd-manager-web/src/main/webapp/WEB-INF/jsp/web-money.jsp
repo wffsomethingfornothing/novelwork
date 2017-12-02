@@ -39,7 +39,7 @@
             <div class="personal-header" data-l1="1">
                 <div class="header-wrapper">
                     <div class="header-logo">
-                        <a href="/">个人中心</a>
+                        <a href="/"><img src="img/logo-qf1.png" style="width: 150px;height: 70px;"></a>
                     </div>
                     <ul class="header-nav">
                         <li class="header-nav-li">
@@ -68,10 +68,10 @@
                <div class="personal-sideBar" data-l1="2">
                     <ul class="sideBar-group">
                         <li class="">
-                        <a href="/" class="sideBar-list-a"><i class="iconfont">&#xe615;</i>首页</a>
+                        <a href="${pageContext.request.contextPath}/minecenter?username=${minecenterReader.username}" class="sideBar-list-a"><i class="iconfont">&#xe615;</i>首页</a>
                         </li>
                         <li class="active">
-                            <a href="/account" class="sideBar-list-a" data-eid="qd_M12"><i class="iconfont">&#xe6c8;</i>账务中心</a>
+                            <a href="${pageContext.request.contextPath}/webmoney?id=${minecenterReader.id}" class="sideBar-list-a" data-eid="qd_M12"><i class="iconfont">&#xe6c8;</i>账务中心</a>
                         </li>
                         <li class="">
                             <a href="/ticketbox" class="sideBar-list-a" data-eid="qd_M13"><i class="iconfont">&#xe61c;</i>我的票夹</a>
