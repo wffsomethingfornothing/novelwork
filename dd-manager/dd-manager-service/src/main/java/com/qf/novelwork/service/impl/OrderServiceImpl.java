@@ -62,7 +62,7 @@ public class OrderServiceImpl implements OrderService {
             map.put("nOrder", nOrder);
             map.put("nOrderQuery", nOrderQuery);
             map.put("webid",rid);
-            //System.out.println(map.get("webid"));
+            //System.out.println(map.get("nOrderQuery").toString());
             result = new Result<NOrderCustom>();
             result.setTotal(webOrderCustomDao.countOrders(map));
             result.setRows(webOrderCustomDao.listOrdersByPage(map));

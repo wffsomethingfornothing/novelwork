@@ -9,13 +9,12 @@ import com.qf.novel.dao.NReaderMapper;
 import com.qf.novel.pojo.po.NReader;
 import com.qf.novel.pojo.po.NReaderExample;
 import com.qf.novel.service.ReaderService;
-import org.apache.http.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.util.DigestUtils;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -97,9 +96,12 @@ public class ReaderServiceImpl implements ReaderService {
     public int addReader(NReader reader,Model model) {
         int i = 0;
         try {
+            String oldpassword=reader.getPassword();
+            String md5Password = DigestUtils.md5DigestAsHex(oldpassword.getBytes());
             long itemId = IDUtils.getItemId();
             reader.setId(itemId);
             reader.setUsername("用户"+itemId);
+            reader.setPassword(md5Password);
             reader.setLevel(1);
             reader.setState(1);
             i = nReaderDao.insert(reader);
@@ -115,6 +117,16 @@ public class ReaderServiceImpl implements ReaderService {
         NReaderExample example = new NReaderExample();
         NReaderExample.Criteria criteria = example.createCriteria();
         criteria.andIdEqualTo(rid);
+        List<NReader> nReaders = nReaderDao.selectByExample(example);
+        model.addAttribute("minecenterReader",nReaders.get(0));
+        return null;
+    }
+
+    @Override
+    public NReader selectReaderbyname(String user, Model model) {
+        NReaderExample example = new NReaderExample();
+        NReaderExample.Criteria criteria = example.createCriteria();
+        criteria.andUsernameEqualTo(user);
         List<NReader> nReaders = nReaderDao.selectByExample(example);
         model.addAttribute("minecenterReader",nReaders.get(0));
         return null;

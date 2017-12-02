@@ -80,7 +80,7 @@
                             <a href="/redpack" class="sideBar-list-a" data-eid="qd_M14"><i class="iconfont">&#xe7d5;</i>我的红包</a>
                         </li>
                         <li class="">
-                            <a href="/comment" class="sideBar-list-a" data-eid="qd_M15"><i class="iconfont">&#xe62e;</i>我的书评</a>
+                            <a href="${pageContext.request.contextPath}/webreplay?id=${minecenterReader.id}" class="sideBar-list-a" data-eid="qd_M15"><i class="iconfont">&#xe62e;</i>我的书评</a>
                         </li>
                     </ul>
                     <ul class="sideBar-group">
@@ -217,7 +217,7 @@
 <script >
     function searchForm(){
         $('#webmoney').datagrid('load',{
-            title:$('#content').val(),
+            content:$('#content').val(),
             status:$('#status').combobox('getValue')
         });
     }

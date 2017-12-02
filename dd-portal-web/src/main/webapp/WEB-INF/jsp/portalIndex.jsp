@@ -123,12 +123,11 @@
 				<div class="sign-out">
 					<%--存放登录名--%>
 					<input type="hidden" id="username" value="${username}">
-					<c:if test="${!empty username}"><a id="login-btn" class="black"
+					<c:if test="${!empty username}"><a href="http://localhost:8080/novelwork/minecenter?username=${username}" id="login-btn" class="black"
 					   data-eid="qd_A06">欢迎您,${username}</a></c:if>
 					<c:if test="${empty username}"><a id="login-btn" class="black" href="http://localhost:8083/novelwork"
 																   data-eid="qd_A06">登录</a></c:if><em>|</em><a id="reg-btn"
-															href="https://passport.qidian.com/reg.html?appid=10&amp;areaid=1&amp;target=iframe&amp;ticket=1&amp;auto=1&amp;autotime=30&amp;returnUrl=https%3A%2F%2Fwww.qidian.com"
-															target="_blank" data-eid="qd_A07">注册</a>
+															href="http://localhost:8080/novelwork/zhuce" data-eid="qd_A07">注册</a>
 				</div>
 			</div>
 			<div class="nav-link fl">
