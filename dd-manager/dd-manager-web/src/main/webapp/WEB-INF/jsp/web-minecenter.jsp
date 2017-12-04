@@ -105,8 +105,12 @@
     <div class="qdp-content home-content" data-l1="3" >
         <div class="home-user-wrapper qdp-border" data-l2="1">
             <div class="home-user-avatar" data-l3="1">
-                <a href="/setting?targetTab=tabTarget2" class="user-avatar-a"><img class="user-avatar-img" src="img/default_user.0.2.png" alt="书友20171113155030021的头像" data-eid="qd_M24"></a>
-                <a href="/vip" target="_blank"  class="home-user-vip icon icon-pt"></a>
+                <a href="#" class="user-avatar-a">
+                    <img class="user-avatar-img" src="img/default_user.0.2.png" data-eid="qd_M24"
+                         id="preview" style="display: block;">
+                </a>
+                <input type="file" name="file" id="doc" style="width:150px;" onchange="javascript:setImagePreview();">
+                <a href="#" target="_blank"  class="home-user-vip icon icon-pt"></a>
             </div>
             <div class="home-user" data-l3="1">
                 <div class="qdp-button">
@@ -189,6 +193,49 @@
             </div>
         
 </body>
+<script type="text/javascript">
+    //下面用于图片上传预览功能
+    function setImagePreview(avalue) {
+        var docObj=document.getElementById("doc");
+
+        var imgObjPreview=document.getElementById("preview");
+        if(docObj.files &&docObj.files[0])
+        {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '110px';
+            imgObjPreview.style.height = '110px';
+
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        }
+        else
+        {
+            //IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            debugger;
+            var localImagId = document.getElementById("localImag");
+            //必须设置初始大小
+            localImagId.style.width = "110px";
+            localImagId.style.height = "110px";
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+
+</script>
 </html>
 <!--登录悬浮-->
 <%--
