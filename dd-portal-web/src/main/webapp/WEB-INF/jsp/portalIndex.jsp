@@ -556,7 +556,32 @@
 
 				<div class="notice-list">
 					<ul>
+						<c:forEach items="${newsList}" var="news" begin="0" end="0">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="1" end="1">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="2" end="2">
 						<li class="color-type_0" data-rid="1"><a
+								href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+								target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="3" end="3">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="4" end="4">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<%--<li class="color-type_0" data-rid="1"><a
 								href="http://www.qidian.com/news/detail/173339308"
 								target="_blank" data-eid="qd_A94"><i>「</i>公告<i>」</i>起点论坛关闭通知</a></li>
 						<li class="color-type_0" data-rid="2"><a
@@ -567,7 +592,7 @@
 								target="_blank" data-eid="qd_A96"><i>「</i>资讯<i>」</i>陈风笑新书火热来袭！</a></li>
 						<li class="color-type_0" data-rid="4"><a
 								href="http://www.qidian.com/news/detail/716393303"
-								target="_blank" data-eid="qd_A97"><i>「</i>活动<i>」</i>玄幻征文获奖公告</a></li>
+								target="_blank" data-eid="qd_A97"><i>「</i>活动<i>」</i>玄幻征文获奖公告</a></li>--%>
 						<li class="color-type_0" data-rid="5"><a class="red"
 																 href="http://cpgame.qd.game.qidian.com/Home/Index/directLogin/name/mxsj/way/1?qd_game_key=mxsj-7&amp;qd_dd_p1=3398"
 																 target="_blank" data-eid="qd_A98" data-qd_dd_p1="1"><em>页游</em>冒险

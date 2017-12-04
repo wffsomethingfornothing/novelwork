@@ -1,8 +1,10 @@
 package com.qf.novelwork.search.web;
 
 
+import com.qf.novel.pojo.po.NNews;
 import com.qf.novel.pojo.vo.NBookSearchCustom;
 import com.qf.novel.pojo.vo.NSearchBookResult;
+import com.qf.novel.service.NewsService;
 import com.qf.novel.service.SearchBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,8 +26,13 @@ import java.util.List;
 @Controller
 public class SearchIndexAction {
 
+    SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     @Autowired
     private SearchBookService searchBookService;
+
+    @Autowired
+    private NewsService newsService;
 
     @RequestMapping("/")
     public String portalIndex(HttpSession session, String keyword,
@@ -60,6 +69,26 @@ public class SearchIndexAction {
         model.addAttribute("catNames",catNames);
 
         return "fenlei";
+
+    }
+    @RequestMapping("/newsmain")
+    public String news(int nid,Model model){
+       NNews nNews = newsService.findNewsByid(nid);
+        Date created = nNews.getCreated();
+        String format = sf.format(created);
+        model.addAttribute("news",nNews);
+        model.addAttribute("format",sf);
+        System.out.println(nNews.getContext());
+        return "newsmain";
+
+    }
+    @RequestMapping("/newslist")
+    public String newslist(Model model){
+        List<NNews> nNews = newsService.listNews();
+        model.addAttribute("format",sf);
+        model.addAttribute("newss",nNews);
+        System.out.println(nNews.get(0).getContext());
+        return "newslist";
 
     }
 
