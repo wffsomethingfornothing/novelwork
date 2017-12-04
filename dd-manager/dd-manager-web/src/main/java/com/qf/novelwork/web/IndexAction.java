@@ -29,13 +29,18 @@ public class IndexAction {
         return page;
     }
 
-    @RequestMapping("/checkname")
+    @RequestMapping("/admin/checkname")
     @ResponseBody
-    public String doLogin(NAdmin nAdmin,HttpSession session) throws Exception{
+    public String doLogin(String adminname,String password,HttpSession session) throws Exception{
+        System.out.println("aaa");
         String  mess = "";
+        NAdmin nAdmin=new NAdmin();
+        nAdmin.setAdminname(adminname);
         NAdmin findUser = nAdminService.selectByadminname(nAdmin);
+        System.out.println(findUser);
         if(findUser!=null){
-            if(findUser.getPassword().equals(nAdmin.getPassword())){
+            if(findUser.getPassword().equals(password)){
+                System.out.println(findUser);
                 session.setAttribute("sessionAdmin", findUser);
                 mess="2";
             }else{
