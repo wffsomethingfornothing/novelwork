@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>账务中心_个人中心_起点中文网</title>
+<title>个人评论_个人中心_纵横千峰小说</title>
     <%--<style type="text/css">
         .XYTipsWindow .boxLoading { position: absolute; display: block; width: 90px; height: 30px; line-height: 30px; margin-left: -45px; margin-top: -15px; left: 50%; top: 50%; color: #f00; }
         .XYTipsWindow .boxLoading { width:28px; margin-left: -14px; background:url("img/loading.gif") no-repeat; text-indent: -999em; text-align: center; }
@@ -30,14 +30,14 @@
 	<link rel="stylesheet" data-ignore="true" href="css/index.0.11.css" />
     <script>document.domain ='qidian.com';</script>
     <style type="text/css">
-		@font-face {
-  font-family: 'iconfont';  /* project id 482297 */
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot');
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.svg#iconfont') format('svg');
-}
+        @font-face {
+            font-family: 'iconfont';  /* project id 482297 */
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot');
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.woff') format('woff'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.svg#iconfont') format('svg');
+        }
         .iconfont{
             font-family:"iconfont" !important;
             font-size:14px;font-style:normal;
