@@ -2421,8 +2421,6 @@ speedTimer.push(new Date().getTime());</script>
         }
 
     }
-
-
     $(function(){
 
         $("#myCarousel").carousel('cycle');
