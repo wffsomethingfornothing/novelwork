@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.novel.dao.NBookCaseMapper" >
+
+
+
+  <sql id="Base_Column_List" >
+    o.id, o.bid, o.rid, o.status,
+    b.title as bookName,c.name as catName,
+    a.authorname as author
+
+
+  </sql>
+
+  <select id="showBookCase" resultType="com.qf.novel.pojo.vo.NBookCase" parameterType="java.lang.Long" >
+    select
+    <include refid="Base_Column_List" />
+    from b_book_reader o
+    LEFT JOIN n_book b on o.bid = b.id
+    LEFT JOIN n_reader r on o.rid = r.id
+    LEFT JOIN n_author a on b.aid = a.id
+    LEFT JOIN n_book_cat c on b.cid = c.id
+    where o.rid=#{id}
+  </select>
+
+  <select id="selectCount" resultType="java.lang.Integer" parameterType="java.lang.Long">
+    select count(*) from b_book_reader where rid=#{id} and status=1
+  </select>
+
+  <select id="selectCount2" resultType="java.lang.Integer" parameterType="com.qf.novel.pojo.vo.NBookCase">
+    select count(*)
+    from b_book_reader o
+    LEFT JOIN n_book b on o.bid = b.id
+    LEFT JOIN n_reader r on o.rid = r.id
+    LEFT JOIN n_author a on b.aid = a.id
+    LEFT JOIN n_book_cat c on b.cid = c.id
+    where title like "%${bookName}%" and o.status=1
+  </select>
+
+  <!--分页-->
+  <select id="selectByPage" resultType="com.qf.novel.pojo.vo.NBookCase" parameterType="com.qf.novel.pojo.vo.BookCasePage">
+    select
+    <include refid="Base_Column_List" />
+    from b_book_reader o
+    LEFT JOIN n_book b on o.bid = b.id
+    LEFT JOIN n_reader r on o.rid = r.id
+    LEFT JOIN n_author a on b.aid = a.id
+    LEFT JOIN n_book_cat c on b.cid = c.id
+    where o.rid=#{reader.id} and o.status=1
+    limit #{firstResult},#{pageSize}
+  </select>
+
+  <!--模糊查询-->
+  <select id="selectByLike" resultType="com.qf.novel.pojo.vo.NBookCase" parameterType="com.qf.novel.pojo.vo.BookCasePage">
+    select
+    <include refid="Base_Column_List" />
+    from b_book_reader o
+    LEFT JOIN n_book b on o.bid = b.id
+    LEFT JOIN n_reader r on o.rid = r.id
+    LEFT JOIN n_author a on b.aid = a.id
+    LEFT JOIN n_book_cat c on b.cid = c.id
+    where o.rid=#{reader.id} and o.status=1 and b.title like "%${bookCase.bookName}%" or a.authorname like '%${bookCase.bookName}%'
+    limit #{firstResult},#{pageSize}
+  </select>
+</mapper>

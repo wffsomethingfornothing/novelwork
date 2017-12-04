@@ -15,12 +15,12 @@
         </select>
         <!--http://www.cnblogs.com/wisdomoon/p/3330856.html-->
         <!--注意：要加上type="button",默认行为是submit-->
-        <button onclick="searchForm()" type="button" class="easyui-linkbutton">搜索</button>
+        <button onclick="searchForm1()" type="button" class="easyui-linkbutton">搜索</button>
     </div>
     <div>
         <%--<button onclick="add()" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">新增</button>--%>
         <%--<button onclick="edit()" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true">编辑</button>--%>
-        <button onclick="remove()" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</button>
+        <button onclick="removeReader()" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</button>
         <button onclick="down()" class="easyui-linkbutton" data-options="iconCls:'icon-down',plain:true">禁言</button>
         <button onclick="up()" class="easyui-linkbutton" data-options="iconCls:'icon-up',plain:true">解禁</button>
     </div>
@@ -28,8 +28,8 @@
 <table id="readerdg" ></table>
 <script>
     //模糊查询
-    function searchForm(){
-        $('#dg').datagrid('load',{
+    function searchForm1(){
+        $('#readerdg').datagrid('load',{
             id: $('#title1').val(),
             username: $('#title2').val(),
             state: $('#state').combobox('getValue')
@@ -45,8 +45,8 @@
 
     }
     //批量删除
-    function remove() {
-        var selections = $('#dg').datagrid('getSelections');
+    function removeReader() {
+        var selections = $('#readerdg').datagrid('getSelections');
         console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -73,7 +73,7 @@
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function(data){
                         //alert(data);
-                        $('#dg').datagrid('reload');
+                        $('#readerdg').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
@@ -83,7 +83,7 @@
         });
     }
     function up() {
-        var selections = $('#dg').datagrid('getSelections');
+        var selections = $('#readerdg').datagrid('getSelections');
         //console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -110,7 +110,7 @@
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function(data){
                         //alert(data);
-                        $('#dg').datagrid('reload');
+                        $('#readerdg').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
@@ -120,7 +120,7 @@
         });
     }
     function down() {
-        var selections = $('#dg').datagrid('getSelections');
+        var selections = $('#readerdg').datagrid('getSelections');
         //console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -147,7 +147,7 @@
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function(data){
                         //alert(data);
-                        $('#dg').datagrid('reload');
+                        $('#readerdg').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
