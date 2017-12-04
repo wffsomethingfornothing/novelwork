@@ -46,7 +46,7 @@
                             <a href="/message/sys" class="header-nav-a " accesskey="3" data-eid="qd_M03"><i class="iconfont">&#xe62c;</i><i class="qdp-unread elUnread dn">未读</i>消息中心</a>
                         </li>
                     </ul>
-                    <a href="/" id="headerLog" class="header-log" data-eid="qd_M06">
+                    <a href="#" id="headerLog" class="header-log" data-eid="qd_M06">
                         ${minecenterReader.username}
                     </a>
                     <%--<a id="login">123</a>--%>

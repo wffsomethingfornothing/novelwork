@@ -56,7 +56,7 @@
                         ${minecenterReader.username}
                     </a>
                     <div class="header-goHome">
-                        <a href="//www.qidian.com" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
+                        <a href="http://localhost:8081/novelwork/${minecenterReader.username}" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
                     </div>
                 </div>
             </div>
