@@ -26,20 +26,11 @@
 
   <select id="listAuthorsByPage" resultType="com.qf.novel.pojo.vo.NAuthorCustom">
     SELECT
-    <include refid="Base_Column_List" />
+    <include refid="Base_Column_List"/>
     FROM n_author a
     LEFT JOIN n_book b ON a.id=b.aid
     <include refid="Where_Clause" />
-    <choose>
-      <when test="order != null and order.sort != null and order.order != null and order.orderParams != null">
-        <foreach collection="order.orderParams" item="item" open="order by" close="" separator=",">
-          a.${item}
-        </foreach>
-      </when>
-      <otherwise>
-        ORDER BY a.id ASC
-      </otherwise>
-    </choose>
+    ORDER BY a.created desc
     LIMIT #{page.offset},#{page.rows}
   </select>
 

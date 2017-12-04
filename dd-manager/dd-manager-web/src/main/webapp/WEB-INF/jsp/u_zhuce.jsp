@@ -74,20 +74,29 @@
         var codeFlag=false;//表示验证不对
         var phonecheck="";
         function settime(obj) {
-
-            if (countdown == 0) {
-                obj.removeAttribute("disabled");
-                obj.value="获取验证码";
-                countdown = 60;
-                return;
-            } else {
-                obj.setAttribute("disabled", true);
-                obj.value="重新发送(" + countdown + ")";
-                countdown--;
+            var uphone=$("#phonenumber").val();
+            var regexTel=/^[1][34578]\d{9}$/;
+            if(uphone!=""&&regexTel.test(uphone))
+            {
+                if (countdown == 0) {
+                    obj.removeAttribute("disabled");
+                    obj.value="获取验证码";
+                    countdown = 60;
+                    return;
+                } else {
+                    obj.setAttribute("disabled", true);
+                    obj.value="重新发送(" + countdown + ")";
+                    countdown--;
+                }
+                setTimeout(function() {
+                        settime(obj) }
+                    ,1000)
             }
-            setTimeout(function() {
-                    settime(obj) }
-                ,1000)
+            else
+            {
+                alert("号码有问题，请重新输入！");
+                $("#phonenumber").val("").focus();
+            }
         }
 
 

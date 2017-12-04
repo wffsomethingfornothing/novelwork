@@ -1,6 +1,5 @@
 package com.qf.novel.service;
 
-import com.qf.novel.common.dto.Order;
 import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
 import com.qf.novel.pojo.po.NAuthor;
@@ -16,7 +15,7 @@ import java.util.List;
  * Version:V1.0
  */
 public interface AuthorService {
-    Result<NAuthorCustom> listItemsByPage(Page page, Order order, NAuthorQuery query);
+    Result<NAuthorCustom> listItemsByPage(Page page,NAuthorQuery query);
 
     int updateBatch(List<Long> ids);
 

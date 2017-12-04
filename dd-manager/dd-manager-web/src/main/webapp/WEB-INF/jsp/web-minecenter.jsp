@@ -33,7 +33,7 @@
             <div class="personal-header" data-l1="1">
                 <div class="header-wrapper">
                     <div class="header-logo">
-                        <a href="/"><img src="img/logo-qf.png" style="width: 150px;height: 70px;"></a>
+                        <a href="/"><img src="img/logo-qf1.png" style="width: 150px;height: 70px;"></a>
                     </div>
                     <ul class="header-nav">
                         <li class="header-nav-li">
@@ -46,12 +46,12 @@
                             <a href="/message/sys" class="header-nav-a " accesskey="3" data-eid="qd_M03"><i class="iconfont">&#xe62c;</i><i class="qdp-unread elUnread dn">未读</i>消息中心</a>
                         </li>
                     </ul>
-                    <a href="/" id="headerLog" class="header-log" data-eid="qd_M06">
+                    <a href="#" id="headerLog" class="header-log" data-eid="qd_M06">
                         ${minecenterReader.username}
                     </a>
                     <%--<a id="login">123</a>--%>
                     <div class="header-goHome">
-                        <a href="//www.qidian.com" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
+                        <a href="http://localhost:8081/novelwork/${minecenterReader.username}" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                <div class="personal-sideBar" data-l1="2">
                     <ul class="sideBar-group">
                         <li class="active">
-                        <a href="/" class="sideBar-list-a"><i class="iconfont">&#xe615;</i>首页</a>
+                        <a href="${pageContext.request.contextPath}/minecenter?username=${minecenterReader.username}" class="sideBar-list-a"><i class="iconfont">&#xe615;</i>首页</a>
                         </li>
                         <li class="">
                             <a href="${pageContext.request.contextPath}/webmoney?id=${minecenterReader.id}" class="sideBar-list-a" data-eid="qd_M12"><i class="iconfont">&#xe6c8;</i>账务中心</a>
@@ -75,7 +75,7 @@
                             <a href="/redpack" class="sideBar-list-a" data-eid="qd_M14"><i class="iconfont">&#xe7d5;</i>我的红包</a>
                         </li>
                         <li class="">
-                            <a href="/comment" class="sideBar-list-a" data-eid="qd_M15"><i class="iconfont">&#xe62e;</i>我的书评</a>
+                            <a href="${pageContext.request.contextPath}/webreplay?id=${minecenterReader.id}" class="sideBar-list-a" data-eid="qd_M15"><i class="iconfont">&#xe62e;</i>我的书评</a>
                         </li>
                     </ul>
                     <ul class="sideBar-group">
@@ -130,7 +130,7 @@
         <ul class="qdp-border home-msg-wrapper" data-l2="1">
             <li class="home-msg" data-l3="1">
                 <div class="home-msg-title"><i class="iconfont">&#xe6c8;</i><b>账户余额</b></div>
-                <div class="home-msg-data"><a href="/account" data-eid="qd_M30"><b class="home-msg-b">${minecenterReader.balance}</b>起点币</a></div>
+                <div class="home-msg-data"><a href="${pageContext.request.contextPath}/webmoney?id=${minecenterReader.id}" data-eid="qd_M30"><b class="home-msg-b">${minecenterReader.balance}</b>起点币</a></div>
                 <a class="home-msg-more blue elPayBtn" href="//pay.yuewen.com/pc/index?appId=10&areaId=1&userGuid=1308572559&returnUrl=https%3A%2F%2Fmy.qidian.com" target="_blank" data-eid="qd_M30">充值</a>
             </li>
             <li class="home-msg" data-l3="2">

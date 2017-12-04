@@ -25,4 +25,12 @@ public class NOrderQuery {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "NOrderQuery{" +
+                "content='" + content + '\'' +
+                ", status=" + status +
+                '}';
+    }
 }

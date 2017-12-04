@@ -123,12 +123,11 @@
 				<div class="sign-out">
 					<%--存放登录名--%>
 					<input type="hidden" id="username" value="${username}">
-					<c:if test="${!empty username}"><a id="login-btn" class="black"
+					<c:if test="${!empty username}"><a href="http://localhost:8080/novelwork/minecenter?username=${username}" id="login-btn" class="black"
 					   data-eid="qd_A06">欢迎您,${username}</a></c:if>
 					<c:if test="${empty username}"><a id="login-btn" class="black" href="http://localhost:8083/novelwork"
 																   data-eid="qd_A06">登录</a></c:if><em>|</em><a id="reg-btn"
-															href="https://passport.qidian.com/reg.html?appid=10&amp;areaid=1&amp;target=iframe&amp;ticket=1&amp;auto=1&amp;autotime=30&amp;returnUrl=https%3A%2F%2Fwww.qidian.com"
-															target="_blank" data-eid="qd_A07">注册</a>
+															href="http://localhost:8080/novelwork/zhuce" data-eid="qd_A07">注册</a>
 				</div>
 			</div>
 			<div class="nav-link fl">
@@ -176,7 +175,7 @@
 					</p>
 					<input class="submit-input" id="searchSubmit" data-eid="qd_A13"
 						   type="submit"><label id="search-btn" class="search-btn"
-												for="searchSubmit"><em class="iconfont" data-eid="qd_A13"></em></label>
+												for="searchSubmit"><em class="iconfont">&#xe600;</em></label>
 				</form>
 			</div>
 		</div>
@@ -382,60 +381,60 @@
 			 data-l1="3">
 			<dl>
 				<dd>
-					<a href="https://www.qidian.com/xuanhuan" target="_blank"
-					   data-eid="qd_A71"><cite><span class="info"> <i class="iconfont">&#xe650;</i><i>玄幻${sessionScope.username}</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=1" target="_blank"
+					   data-eid="qd_A71"><cite><em class="iconfont">&#xe650;</em><span class="info">玄幻</span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/qihuan" target="_blank"
-					   data-eid="qd_A72"><cite><span class="info"><i class="iconfont">&#xe64c;</i><i>奇幻</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=2" target="_blank"
+					   data-eid="qd_A72"><cite><em class="iconfont">&#xe64c;</em><span class="info"><i>奇幻</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/wuxia" target="_blank"
-					   data-eid="qd_A73"><cite><span class="info"><i class="iconfont">&#xe603;</i><i>武侠</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=3"
+					   data-eid="qd_A73"><cite><em class="iconfont">&#xe603;</em><span class="info"><i>武侠</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/xianxia" target="_blank"
-					   data-eid="qd_A74"><cite><span class="info"><i class="iconfont">&#xe61b;</i><i>仙侠</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=4" target="_blank"
+					   data-eid="qd_A74"><cite><em class="iconfont">&#xe61b;</em><span class="info"><i>仙侠</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/dushi" target="_blank"
-					   data-eid="qd_A75"><cite><span class="info"><i class="iconfont">&#xe601;</i><i>都市</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=5" target="_blank"
+					   data-eid="qd_A75"><cite><em class="iconfont">&#xe601;</em><span class="info"><i>都市</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/xianshi" target="_blank"
-					   data-eid="qd_A76"><cite><span class="info"><i class="iconfont">&#xe606;</i><i>现实</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=6" target="_blank"
+					   data-eid="qd_A76"><cite><em class="iconfont">&#xe606;</em><span class="info"><i>现实</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/junshi" target="_blank"
-					   data-eid="qd_A77"><cite><span class="info"><i class="iconfont">&#xe60d;</i><i>军事</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=7" target="_blank"
+					   data-eid="qd_A77"><cite><em class="iconfont">&#xe60d;</em><span class="info"><i>军事</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/lishi" target="_blank"
-					   data-eid="qd_A78"><cite><span class="info"><i class="iconfont">&#xe604;</i><i>历史</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=8" target="_blank"
+					   data-eid="qd_A78"><cite><em class="iconfont">&#xe604;</em><span class="info"><i>历史</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/youxi" target="_blank"
-					   data-eid="qd_A79"><cite><span class="info"><i class="iconfont">&#xe680;</i><i>游戏</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=9" target="_blank"
+					   data-eid="qd_A79"><cite><em class="iconfont">&#xe680;</em><span class="info"><i>游戏</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/tiyu" target="_blank"
-					   data-eid="qd_A80"><cite><span class="info"><i class="iconfont">&#xe60b;</i><i>体育</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=10" target="_blank"
+					   data-eid="qd_A80"><cite><em class="iconfont">&#xe60b;</em><span class="info"><i>体育</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/kehuan" target="_blank"
-					   data-eid="qd_A81"><cite><span class="info"><i class="iconfont">&#xe60e;</i><i>科幻</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=11" target="_blank"
+					   data-eid="qd_A81"><cite><em class="iconfont">&#xe60e;</em><span class="info"><i>科幻</i></span></cite></a>
 				</dd>
 				<dd class="even">
-					<a href="https://www.qidian.com/lingyi" target="_blank"
-					   data-eid="qd_A82"><cite><span class="info"><i class="iconfont">&#xe605;</i><i>灵异</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=12" target="_blank"
+					   data-eid="qd_A82"><cite><em class="iconfont">&#xe605;</em><span class="info"><i>灵异</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qdmm.com/" target="_blank" data-eid="qd_A83"><cite><span
-							class="info"><i class="iconfont">&#xe654;</i><i>女生网</i></span></cite></a>
+					<a href="https://www.qdmm.com/" target="_blank" data-eid="qd_A83"><cite><em class="iconfont">&#xe654;</em><span
+							class="info"><i>言情</i></span></cite></a>
 				</dd>
 				<dd>
-					<a href="https://www.qidian.com/2cy" target="_blank"
-					   data-eid="qd_A84"><cite><span class="info"><i class="iconfont">&#xe602;</i><i>二次元</i></span></cite></a>
+					<a href="http://localhost:8082/novelwork/fenlei?catParentName=13" target="_blank"
+					   data-eid="qd_A84"><cite><em class="iconfont">&#xe602;</em><span class="info"><i>御姐</i></span></cite></a>
 				</dd>
 			</dl>
 		</div>
@@ -580,7 +579,6 @@
 				</div>
 				<div class="attention">
 					<ul id="wordSlide" class="word_slide" data-rel="#wordSlide li">
-						<em class="iconfont"></em>
 						<li id="wordList1"
 							style="display: list-item; transition: transform 250ms linear 0s; backface-visibility: hidden; transform: translateY(-100%);"
 							data-rel="wordList1" data-rid="1"><a
@@ -651,7 +649,7 @@
 		<div class="book-list-wrap mr30 fl" data-l1="8">
 			<h3 class="wrap-title lang">
 				本周强推<a class="more" href="https://www.qidian.com/book/strongrec"
-					   data-eid="qd_A105" target="_blank">更多<em class="iconfont"></em></a>
+					   data-eid="qd_A105" target="_blank">更多</a>
 			</h3>
 			<div class="book-list">
 				<ul>
@@ -1098,7 +1096,7 @@
 			<h3 class="wrap-title lang">
 				三江<i>·</i>网文新风<a class="more"
 								 href="https://www.qidian.com/book/sanjiang" data-eid="qd_A114"
-								 target="_blank">更多<em class="iconfont"></em></a>
+								 target="_blank">更多</a>
 			</h3>
 			<div class="book-list">
 				<ul>
@@ -1232,7 +1230,7 @@
 					<h3 class="wrap-title lang">
 						原创风云榜<i>·</i>新书<a class="more"
 										  href="https://www.qidian.com/rank/yuepiao?chn=0"
-										  data-eid="qd_A118" target="_blank">更多<em class="iconfont"></em></a>
+										  data-eid="qd_A118" target="_blank">更多</a>
 					</h3>
 					<div class="book-list">
 						<ul>
@@ -1379,7 +1377,7 @@
 					<h3 class="wrap-title lang">
 						24小时热销榜<a class="more"
 								  href="https://www.qidian.com/rank/hotsales" data-eid="qd_A118"
-								  target="_blank">更多<em class="iconfont"></em></a>
+								  target="_blank">更多</a>
 					</h3>
 					<div class="book-list">
 						<ul>
@@ -1410,112 +1408,98 @@
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/3602691"
-									   target="_blank" data-eid="qd_A117" data-bid="3602691">修真聊天群</a><span
-										class="iconfont up"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="3602691">修真聊天群</a>
 								</div></li>
 							<li data-rid="3"><div class="num-box">
 								<span class="num3">3</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1003354631"
-									   target="_blank" data-eid="qd_A117" data-bid="1003354631">一念永恒</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1003354631">一念永恒</a>
 								</div></li>
 							<li data-rid="4"><div class="num-box">
 								<span class="num4">4</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1010191960"
-									   target="_blank" data-eid="qd_A117" data-bid="1010191960">大王饶命</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1010191960">大王饶命</a>
 								</div></li>
 							<li data-rid="5"><div class="num-box">
 								<span class="num5">5</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1004185492"
-									   target="_blank" data-eid="qd_A117" data-bid="1004185492">带着仓库到大明</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1004185492">带着仓库到大明</a>
 								</div></li>
 							<li data-rid="6"><div class="num-box">
 								<span class="num6">6</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1003580078"
-									   target="_blank" data-eid="qd_A117" data-bid="1003580078">重生之财源滚滚</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1003580078">重生之财源滚滚</a>
 								</div></li>
 							<li data-rid="7"><div class="num-box">
 								<span class="num7">7</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1010468795"
-									   target="_blank" data-eid="qd_A117" data-bid="1010468795">飞剑问道</a><span
-										class="iconfont up"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1010468795">飞剑问道</a>
 								</div></li>
 							<li data-rid="8"><div class="num-box">
 								<span class="num8">8</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1004179514"
-									   target="_blank" data-eid="qd_A117" data-bid="1004179514">天道图书馆</a><span
-										class="iconfont up"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1004179514">天道图书馆</a>
 								</div></li>
 							<li data-rid="9"><div class="num-box">
 								<span class="num9">9</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1010136878"
-									   target="_blank" data-eid="qd_A117" data-bid="1010136878">汉乡</a><span
-										class="iconfont up"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1010136878">汉乡</a>
 								</div></li>
 							<li data-rid="10"><div class="num-box">
 								<span class="num10">10</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1009915605"
-									   target="_blank" data-eid="qd_A117" data-bid="1009915605">奶爸的文艺人生</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1009915605">奶爸的文艺人生</a>
 								</div></li>
 							<li data-rid="11"><div class="num-box">
 								<span class="num11">11</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1003307568"
-									   target="_blank" data-eid="qd_A117" data-bid="1003307568">不朽凡人</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1003307568">不朽凡人</a>
 								</div></li>
 							<li data-rid="12"><div class="num-box">
 								<span class="num12">12</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/1009704712"
-									   target="_blank" data-eid="qd_A117" data-bid="1009704712">牧神记</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="1009704712">牧神记</a>
 								</div></li>
 							<li data-rid="13"><div class="num-box">
 								<span class="num13">13</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/2510964"
-									   target="_blank" data-eid="qd_A117" data-bid="2510964">龙皇武神</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="2510964">龙皇武神</a>
 								</div></li>
 							<li data-rid="14"><div class="num-box">
 								<span class="num14">14</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/3258971"
-									   target="_blank" data-eid="qd_A117" data-bid="3258971">帝霸</a><span
-										class="iconfont up"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="3258971">帝霸</a>
 								</div></li>
 							<li data-rid="15"><div class="num-box">
 								<span class="num15">15</span>
 							</div>
 								<div class="name-box">
 									<a class="name" href="https://book.qidian.com/info/3662715"
-									   target="_blank" data-eid="qd_A117" data-bid="3662715">大魏宫廷</a><span
-										class="iconfont"></span>
+									   target="_blank" data-eid="qd_A117" data-bid="3662715">大魏宫廷</a>
 								</div></li>
 						</ul>
 					</div>
@@ -1524,7 +1508,7 @@
 					<h3 class="wrap-title lang">
 						新锐会员周点击榜<a class="more"
 								   href="https://www.qidian.com/rank/newvipclick" target="_blank"
-								   data-eid="qd_A118">更多<em class="iconfont"></em></a>
+								   data-eid="qd_A118">更多</a>
 					</h3>
 					<div class="book-list">
 						<ul>
@@ -1670,7 +1654,7 @@
 				<div class="rank-list" data-l2="4">
 					<h3 class="wrap-title lang">
 						周推荐票榜<a class="more" href="https://www.qidian.com/rank/recom"
-								target="_blank" data-eid="qd_A118">更多<em class="iconfont"></em></a>
+								target="_blank" data-eid="qd_A118">更多</a>
 					</h3>
 					<div class="book-list">
 						<ul>
@@ -1817,7 +1801,7 @@
 					<h3 class="wrap-title lang">
 						签约作家新书榜<a class="more"
 								  href="https://www.qidian.com/rank/signnewbook" target="_blank"
-								  data-eid="qd_A118">更多<em class="iconfont"></em></a>
+								  data-eid="qd_A118">更多</a>
 					</h3>
 					<div class="book-list">
 						<ul>
@@ -2134,8 +2118,7 @@
 		</div>
 		<div class="nav-list min-user fr">
 			<ul>
-				<li id="min-search"><form id="formUrl"
-										  action="//www.qidian.com/search" method="get" target="_blank">
+				<li id="min-search"><form id="formUrl" action="//www.qidian.com/search" method="get" target="_blank">
 					<label id="pin-search" for="topSearchSubmit" data-eid="qd_A62"></label><input id="pin-input"
 																		class="pin-input hide" name="kw" placeholder="异世界的美食家"
 																		type="text"> <input class="submit-input"
@@ -2163,7 +2146,7 @@
 				<li class="line"></li>
 				<li class="book-shelf" id="top-book-shelf"><a
 						href="https://me.qidian.com/bookCase/bookCase.aspx"
-						target="_blank" data-eid="qd_A63"><em class="iconfont"></em><i>我的书架</i></a></li>
+						target="_blank" data-eid="qd_A63"><i>我的书架</i></a></li>
 			</ul>
 		</div>
 	</div>

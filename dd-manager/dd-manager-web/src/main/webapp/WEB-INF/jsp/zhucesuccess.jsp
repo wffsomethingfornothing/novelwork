@@ -25,7 +25,7 @@
 
             if (svalue == 0) {
                 window.clearInterval(interval);
-                location.href = "${pageContext.request.contextPath}/";
+                location.href = "http://localhost:8083/novelwork";
                 return;
             }
 
