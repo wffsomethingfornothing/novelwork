@@ -4,20 +4,20 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>账务中心_个人中心_起点中文网</title>
+<title>账务中心_个人中心_纵横千峰小说</title>
     <meta name="keywords" content="小说,小说网,玄幻小说,武侠小说,都市小说,历史小说,网络小说,言情小说,青春小说,原创网络文学">
     <meta name="description" content="小说阅读,精彩小说尽在起点中文网. 起点中文网提供玄幻小说,武侠小说,原创小说,网游小说,都市小说,言情小说,青春小说,历史小说,军事小说,网游小说,科幻小说,恐怖小说,首发小说,最新章节免费">
 	<link rel="icon" type="image/x-icon" href="//qidian.gtimg.com/qdp/img/favicon.0.1.ico">
 	<link rel="stylesheet" data-ignore="true" href="css/index.0.11.css" />
     <style type="text/css">
-		@font-face {
-  font-family: 'iconfont';  /* project id 482297 */
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot');
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.svg#iconfont') format('svg');
-}
+        @font-face {
+            font-family: 'iconfont';  /* project id 482297 */
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot');
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.woff') format('woff'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.svg#iconfont') format('svg');
+        }
         .iconfont{
             font-family:"iconfont" !important;
             font-size:14px;font-style:normal;
@@ -56,7 +56,7 @@
                         ${minecenterReader.username}
                     </a>
                     <div class="header-goHome">
-                        <a href="//www.qidian.com" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
+                        <a href="http://localhost:8081/novelwork/${minecenterReader.username}" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
                     </div>
                 </div>
             </div>

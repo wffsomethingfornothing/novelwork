@@ -11,7 +11,23 @@
 	href="https://qidian.gtimg.com/qd/favicon/qd_icon.0.2.ico">
 <link rel="Bookmark" type="image/x-icon"
 	href="https://qidian.gtimg.com/qd/favicon/qd_icon.0.2.ico">
-
+	<style type="text/css">
+		@font-face {
+			font-family: 'iconfont';  /* project id 482297 */
+			src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot');
+			src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot?#iefix') format('embedded-opentype'),
+			url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.woff') format('woff'),
+			url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.ttf') format('truetype'),
+			url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.svg#iconfont') format('svg');
+		}
+		.iconfont{
+			font-family:"iconfont" !important;
+			font-size:20px;font-style:normal;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-stroke-width: 0.2px;
+			-moz-osx-font-smoothing: grayscale;
+		}
+	</style>
 </head>
 <body>
 	<div class="wrap">
@@ -19,7 +35,7 @@
 		<div class="header ">
 			<div class="box-center">
 				<div class="logo">
-					<a href="http://www.qidian.com/" target="_blank"></a>
+					<a href="#" ><img src="img/logo-qf.png"></a>
 				</div>
 			</div>
 		</div>
@@ -64,11 +80,11 @@
 											<div class="error-tip hidden" id="error"></div>
 											<dl>
 												<dd>
-													<em class="iconfont"> </em><input type="text" name="username" tabindex="1"
+													<input type="text" name="username" tabindex="1"
 														placeholder="用户名" id="username">
 												</dd>
 												<dd>
-													<em class="iconfont"> </em><input type="password"
+													<input type="password"
 														tabindex="2" placeholder="密码" id="password" name="password">
 												</dd>
 

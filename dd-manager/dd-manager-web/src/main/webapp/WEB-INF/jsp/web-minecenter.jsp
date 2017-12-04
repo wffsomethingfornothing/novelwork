@@ -4,19 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>个人中心_纵横千峰小说</title>
 <meta name="keywords" content="小说,小说网,玄幻小说,武侠小说,都市小说,历史小说,网络小说,言情小说,青春小说,原创网络文学">
     <meta name="description" content="小说阅读,精彩小说尽在起点中文网. 起点中文网提供玄幻小说,武侠小说,原创小说,网游小说,都市小说,言情小说,青春小说,历史小说,军事小说,网游小说,科幻小说,恐怖小说,首发小说,最新章节免费">
 	<link rel="stylesheet" data-ignore="true" href="css/index.0.11.css" />
     <style type="text/css">
-		@font-face {
-  font-family: 'iconfont';  /* project id 482297 */
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot');
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.svg#iconfont') format('svg');
-}
+        @font-face {
+            font-family: 'iconfont';  /* project id 482297 */
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot');
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.woff') format('woff'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.svg#iconfont') format('svg');
+        }
         .iconfont{
             font-family:"iconfont" !important;
             font-size:14px;font-style:normal;
@@ -46,7 +46,7 @@
                             <a href="/message/sys" class="header-nav-a " accesskey="3" data-eid="qd_M03"><i class="iconfont">&#xe62c;</i><i class="qdp-unread elUnread dn">未读</i>消息中心</a>
                         </li>
                     </ul>
-                    <a href="/" id="headerLog" class="header-log" data-eid="qd_M06">
+                    <a href="#" id="headerLog" class="header-log" data-eid="qd_M06">
                         ${minecenterReader.username}
                     </a>
                     <%--<a id="login">123</a>--%>
@@ -105,8 +105,12 @@
     <div class="qdp-content home-content" data-l1="3" >
         <div class="home-user-wrapper qdp-border" data-l2="1">
             <div class="home-user-avatar" data-l3="1">
-                <a href="/setting?targetTab=tabTarget2" class="user-avatar-a"><img class="user-avatar-img" src="img/default_user.0.2.png" alt="书友20171113155030021的头像" data-eid="qd_M24"></a>
-                <a href="/vip" target="_blank"  class="home-user-vip icon icon-pt"></a>
+                <a href="#" class="user-avatar-a">
+                    <img class="user-avatar-img" src="img/default_user.0.2.png" data-eid="qd_M24"
+                         id="preview" style="display: block;">
+                </a>
+                <input type="file" name="file" id="doc" style="width:150px;" onchange="javascript:setImagePreview();">
+                <a href="#" target="_blank"  class="home-user-vip icon icon-pt"></a>
             </div>
             <div class="home-user" data-l3="1">
                 <div class="qdp-button">
@@ -189,6 +193,49 @@
             </div>
         
 </body>
+<script type="text/javascript">
+    //下面用于图片上传预览功能
+    function setImagePreview(avalue) {
+        var docObj=document.getElementById("doc");
+
+        var imgObjPreview=document.getElementById("preview");
+        if(docObj.files &&docObj.files[0])
+        {
+            //火狐下，直接设img属性
+            imgObjPreview.style.display = 'block';
+            imgObjPreview.style.width = '110px';
+            imgObjPreview.style.height = '110px';
+
+            //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+            imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+        }
+        else
+        {
+            //IE下，使用滤镜
+            docObj.select();
+            var imgSrc = document.selection.createRange().text;
+            debugger;
+            var localImagId = document.getElementById("localImag");
+            //必须设置初始大小
+            localImagId.style.width = "110px";
+            localImagId.style.height = "110px";
+            //图片异常的捕捉，防止用户修改后缀来伪造图片
+            try{
+                localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+            }
+            catch(e)
+            {
+                alert("您上传的图片格式不正确，请重新选择!");
+                return false;
+            }
+            imgObjPreview.style.display = 'none';
+            document.selection.empty();
+        }
+        return true;
+    }
+
+</script>
 </html>
 <!--登录悬浮-->
 <%--

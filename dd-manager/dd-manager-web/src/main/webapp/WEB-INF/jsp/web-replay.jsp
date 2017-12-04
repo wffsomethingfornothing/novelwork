@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>账务中心_个人中心_起点中文网</title>
-    <style type="text/css">
+<title>个人评论_个人中心_纵横千峰小说</title>
+    <%--<style type="text/css">
         .XYTipsWindow .boxLoading { position: absolute; display: block; width: 90px; height: 30px; line-height: 30px; margin-left: -45px; margin-top: -15px; left: 50%; top: 50%; color: #f00; }
         .XYTipsWindow .boxLoading { width:28px; margin-left: -14px; background:url("img/loading.gif") no-repeat; text-indent: -999em; text-align: center; }
         .XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover { background-image: url("img/ico.png"); background-repeat: no-repeat; }
@@ -23,21 +23,21 @@
         .XYTipsWindow .dialogBtn { margin: 5px 5px 0 0; width:80px; height:35px; background-position: 0 -30px; border:none; color:#333; }
         .XYTipsWindow .dialogBtn.hover { background-position: 0 -65px; }
         .XYTipsWindow .shadow { box-shadow:2px 2px 5px #C0BBB5; -moz-box-shadow: 2px 2px 5px #C0BBB5; -webkit-box-shadow:2px 2px 5px #C0BBB5; }
-    </style>
+    </style>--%>
     <meta name="keywords" content="小说,小说网,玄幻小说,武侠小说,都市小说,历史小说,网络小说,言情小说,青春小说,原创网络文学">
     <meta name="description" content="小说阅读,精彩小说尽在起点中文网. 起点中文网提供玄幻小说,武侠小说,原创小说,网游小说,都市小说,言情小说,青春小说,历史小说,军事小说,网游小说,科幻小说,恐怖小说,首发小说,最新章节免费">
 	<link rel="icon" type="image/x-icon" href="//qidian.gtimg.com/qdp/img/favicon.0.1.ico">
 	<link rel="stylesheet" data-ignore="true" href="css/index.0.11.css" />
     <script>document.domain ='qidian.com';</script>
     <style type="text/css">
-		@font-face {
-  font-family: 'iconfont';  /* project id 482297 */
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot');
-  src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.svg#iconfont') format('svg');
-}
+        @font-face {
+            font-family: 'iconfont';  /* project id 482297 */
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot');
+            src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.woff') format('woff'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.svg#iconfont') format('svg');
+        }
         .iconfont{
             font-family:"iconfont" !important;
             font-size:14px;font-style:normal;
@@ -78,7 +78,7 @@
                         
                     </a>
                     <div class="header-goHome">
-                        <a href="//www.qidian.com" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
+                        <a href="http://localhost:8081/novelwork/${minecenterReader.username}" target="_blank" accesskey="5" data-eid="qd_M05">起点首页</a>
                     </div>
                 </div>
             </div>
@@ -205,15 +205,15 @@
                             return;
                         }
                         else if(selections.length == 1){
-                            $.XYTipsWindow({
-                                ___title:"登录",
-                                ___content:"iframe:u_zhuce.jsp",
-                                ___width:"400",
-                                ___height:"410",
-                                ___showbg:true,
-                                ___drag:"___boxTitle"
-
-                            });
+//                            $.XYTipsWindow({
+//                                ___title:"登录",
+//                                ___content:"iframe:u_zhuce.jsp",
+//                                ___width:"400",
+//                                ___height:"410",
+//                                ___showbg:true,
+//                                ___drag:"___boxTitle"
+//
+//                            });
                         }
                     });
                     $('#webreplay').datagrid({

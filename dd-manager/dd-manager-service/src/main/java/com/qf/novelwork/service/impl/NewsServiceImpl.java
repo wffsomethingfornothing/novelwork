@@ -6,7 +6,9 @@ import com.qf.novel.common.dto.Order;
 import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
 import com.qf.novel.dao.NNewsCustomMapper;
+import com.qf.novel.dao.NNewsMapper;
 import com.qf.novel.pojo.po.NNews;
+import com.qf.novel.pojo.po.NNewsExample;
 import com.qf.novel.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +23,8 @@ public class NewsServiceImpl implements NewsService {
 
     @Autowired
     private NNewsCustomMapper newsDao;
+    @Autowired
+    private NNewsMapper newsMapper;
 
     @Override
     public Result<NNews> listNewsByPage(Page page, Order order, NNews query) {
@@ -42,5 +46,26 @@ public class NewsServiceImpl implements NewsService {
             e.printStackTrace();
         }
         return result;
+    }
+
+    @Override
+    public List<NNews> listNews() {
+
+        NNewsExample example =new NNewsExample();
+        NNewsExample.Criteria c =example.createCriteria();
+        c.andStatusEqualTo(1);
+        List<NNews> nNews = newsMapper.selectByExample(example);
+
+        return nNews;
+    }
+
+    @Override
+    public NNews findNewsByid(int nid) {
+        NNewsExample example =new NNewsExample();
+        NNewsExample.Criteria c =example.createCriteria();
+        c.andIdEqualTo((long) nid);
+        List<NNews> nNews = newsMapper.selectByExample(example);
+        nNews.get(0);
+        return nNews.get(0);
     }
 }

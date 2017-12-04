@@ -231,7 +231,7 @@
                             <li data-rid="1">
                                 <div class="book-shadow"></div>
                                 <div class="img-box"><a href="http://localhost:8081/novelwork/oneBook?id=${book.id}" data-eid="qd_F13"
-                                                        data-bid="1010741169" target="_blank"><img src="img/150_002.jpg"
+                                                        data-bid="1010741169" target="_blank"><img src="${book.image}"
                                                                                                    alt="贵族战记"></a></div>
                                 <h3><a href="http://localhost:8081/novelwork/oneBook?id=${book.id}" data-eid="qd_F14"
                                        data-bid="1010741169" target="_blank">${book.title}</a></h3>
