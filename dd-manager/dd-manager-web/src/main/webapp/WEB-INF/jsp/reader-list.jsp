@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<div id="toolbar">
+<div id="toolbarreader">
     <div style="padding: 5px; background-color: #fff;">
         <label>书友号：</label>
         <input class="easyui-textbox" type="text" id="title1">
@@ -29,7 +29,7 @@
 <script>
     //模糊查询
     function searchForm(){
-        $('#dg').datagrid('load',{
+        $('#readerdg').datagrid('load',{
             id: $('#title1').val(),
             username: $('#title2').val(),
             state: $('#state').combobox('getValue')
@@ -46,7 +46,7 @@
     }
     //批量删除
     function remove() {
-        var selections = $('#dg').datagrid('getSelections');
+        var selections = $('#readerdg').datagrid('getSelections');
         console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -73,7 +73,7 @@
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function(data){
                         //alert(data);
-                        $('#dg').datagrid('reload');
+                        $('#readerdg').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
@@ -83,7 +83,7 @@
         });
     }
     function up() {
-        var selections = $('#dg').datagrid('getSelections');
+        var selections = $('#readerdg').datagrid('getSelections');
         //console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -110,7 +110,7 @@
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function(data){
                         //alert(data);
-                        $('#dg').datagrid('reload');
+                        $('#readerdg').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
@@ -120,7 +120,7 @@
         });
     }
     function down() {
-        var selections = $('#dg').datagrid('getSelections');
+        var selections = $('#readerdg').datagrid('getSelections');
         //console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -147,7 +147,7 @@
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function(data){
                         //alert(data);
-                        $('#dg').datagrid('reload');
+                        $('#readerdg').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
@@ -159,7 +159,7 @@
     $("#readerdg").datagrid({
         url:"readers",
         multiSort:true,
-        toolbar: '#toolbar',
+        toolbar: '#toolbarreader',
         striped:true,
         pagination:true,
         rownumbers:true,

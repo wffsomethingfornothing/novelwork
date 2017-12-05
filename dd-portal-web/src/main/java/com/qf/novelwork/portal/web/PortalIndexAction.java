@@ -3,7 +3,9 @@ package com.qf.novelwork.portal.web;
 
 import com.qf.novel.common.util.PropKit;
 import com.qf.novel.pojo.po.NContent;
+import com.qf.novel.pojo.po.NNews;
 import com.qf.novel.service.ContentService;
+import com.qf.novel.service.NewsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,11 +25,16 @@ public class PortalIndexAction {
     @Autowired
     private ContentService contentService;
 
+    @Autowired
+    private NewsService newsService;
+
 
     @RequestMapping("/{username}")
     public String portalIndex(@PathVariable("username") String username, Model model){
 
         model.addAttribute("username", username);
+        List<NNews> list1 = newsService.listNews();
+        model.addAttribute("newsList", list1);
 
         /*String tokenId = "";
 
@@ -49,9 +56,11 @@ public class PortalIndexAction {
         //第一步：使用service去查，根据tb_content_category的ID去查
         Long id = PropKit.use("ftp.properties").getLong("ftp.gall");
         List<NContent> list = contentService.listContentsByCid(id);
+        List<NNews> list1 = newsService.listNews();
         //第二步：存放到model中
         model.addAttribute("ad1List", list);
-        System.out.println(list);
+        model.addAttribute("newsList", list1);
+        System.out.println(list1);
         //第三步：返回首页
         return "portalIndex";
     }

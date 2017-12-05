@@ -127,7 +127,7 @@
                 </a>
             </div>
             <div class="logo fl">
-                <a href="#" >
+                <a href="${pageContext.request.contextPath}/" >
                     <img src="img/logo-qf.png">
                 </a>
             </div>
@@ -883,7 +883,7 @@
                         <c:forEach items="${bookList }" var="book" >
                             <li data-rid="1">
                                 <div class="book-img-box">
-                                    <a href="http://localhost:8081/novelwork/oneBook?id=${book.id}" data-bid="1010468795" data-eid="qd_B57" target="_blank"><img src="img/150_005.jpg"></a>
+                                    <a href="http://localhost:8081/novelwork/oneBook?id=${book.id}" data-bid="1010468795" data-eid="qd_B57" target="_blank"><img src="${book.image}"></a>
                                 </div>
                                 <div class="book-mid-info">
                                     <h4><a href="http://localhost:8081/novelwork/oneBook?id=${book.id}" target="_blank" data-eid="qd_B58" data-bid="1010468795">${book.title}</a></h4>

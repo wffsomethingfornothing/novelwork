@@ -25,4 +25,8 @@ public interface ReaderService {
     NReader selectReader(Long rid, Model model);
 
     NReader selectReaderbyname(String user, Model model);
+
+    List<NReader> selectAllName();
+
+    int modifyReader(NReader reader);
 }

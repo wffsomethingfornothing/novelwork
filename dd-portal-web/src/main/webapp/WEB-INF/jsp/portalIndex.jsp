@@ -89,11 +89,11 @@
 	<style type="text/css">
 		@font-face {
 			font-family: 'iconfont';  /* project id 482297 */
-			src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot');
-			src: url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.eot?#iefix') format('embedded-opentype'),
-			url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.woff') format('woff'),
-			url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.ttf') format('truetype'),
-			url('//at.alicdn.com/t/font_482297_6qvf4zplselsdcxr.svg#iconfont') format('svg');
+			src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot');
+			src: url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.eot?#iefix') format('embedded-opentype'),
+			url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.woff') format('woff'),
+			url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.ttf') format('truetype'),
+			url('//at.alicdn.com/t/font_482297_l19xcg9uyd8wipb9.svg#iconfont') format('svg');
 		}
 		.iconfont{
 			font-family:"iconfont" !important;
@@ -184,7 +184,7 @@
 		<div class="main-nav box-center cf">
 			<ul>
 				<li class="first"><span><em><i></i><i></i><i></i></em>作品分类</span></li>
-				<li class="nav-li"><a href="https://www.qidian.com/all"
+				<li class="nav-li"><a href="http://localhost:8082/novelwork"
 									  data-eid="qd_A15">全部作品</a></li>
 				<li class="nav-li"><a href="https://www.qidian.com/rank"
 									  data-eid="qd_A16">排行</a></li>
@@ -556,7 +556,32 @@
 
 				<div class="notice-list">
 					<ul>
+						<c:forEach items="${newsList}" var="news" begin="0" end="0">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="1" end="1">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="2" end="2">
 						<li class="color-type_0" data-rid="1"><a
+								href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+								target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="3" end="3">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<c:forEach items="${newsList}" var="news" begin="4" end="4">
+							<li class="color-type_0" data-rid="1"><a
+									href="http://localhost:8082/novelwork/newsmain?nid=${news.id}"
+									target="_blank" data-eid="qd_A94"><i>「</i>新闻<i>」</i>${news.title}</a></li>
+						</c:forEach>
+						<%--<li class="color-type_0" data-rid="1"><a
 								href="http://www.qidian.com/news/detail/173339308"
 								target="_blank" data-eid="qd_A94"><i>「</i>公告<i>」</i>起点论坛关闭通知</a></li>
 						<li class="color-type_0" data-rid="2"><a
@@ -567,7 +592,7 @@
 								target="_blank" data-eid="qd_A96"><i>「</i>资讯<i>」</i>陈风笑新书火热来袭！</a></li>
 						<li class="color-type_0" data-rid="4"><a
 								href="http://www.qidian.com/news/detail/716393303"
-								target="_blank" data-eid="qd_A97"><i>「</i>活动<i>」</i>玄幻征文获奖公告</a></li>
+								target="_blank" data-eid="qd_A97"><i>「</i>活动<i>」</i>玄幻征文获奖公告</a></li>--%>
 						<li class="color-type_0" data-rid="5"><a class="red"
 																 href="http://cpgame.qd.game.qidian.com/Home/Index/directLogin/name/mxsj/way/1?qd_game_key=mxsj-7&amp;qd_dd_p1=3398"
 																 target="_blank" data-eid="qd_A98" data-qd_dd_p1="1"><em>页游</em>冒险
@@ -2101,7 +2126,7 @@
 				<li class="more"><a href="javascript:" id="top-nav-more"
 									target="" data-eid="qd_A54">更多<span></span></a>
 					<div class="dropdown">
-						<a href="https://www.qidian.com/all" target="_blank"
+						<a href="http://localhost:8082/novelwork" target="_blank"
 						   data-eid="qd_A169">全部作品</a><a href="https://www.qidian.com/2cy"
 														 target="" data-eid="qd_A55">二次元</a><a
 							href="https://www.qidian.com/qihuan" target="" data-eid="qd_A51">奇幻</a><a
@@ -2396,8 +2421,6 @@ speedTimer.push(new Date().getTime());</script>
         }
 
     }
-
-
     $(function(){
 
         $("#myCarousel").carousel('cycle');

@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.util.DigestUtils;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -103,13 +104,35 @@ public class ReaderServiceImpl implements ReaderService {
             reader.setUsername("用户"+itemId);
             reader.setPassword(md5Password);
             reader.setLevel(1);
+            reader.setBalance(0L);
+            reader.setTickets(0L);
             reader.setState(1);
+            reader.setCreated(new Date());
+            reader.setUpdated(new Date());
             i = nReaderDao.insert(reader);
             model.addAttribute("userName",reader.getUsername());
         } catch (Exception e) {
             e.printStackTrace();
         }
         return i;
+    }
+
+    @Override
+    public int modifyReader(NReader reader) {
+        int i = 0;
+        NReader record = new NReader();
+        record.setUsername(reader.getUsername());
+
+        i = nReaderDao.updateByPrimaryKeySelective(record);
+
+        return i;
+    }
+
+    @Override
+    public List<NReader> selectAllName() {
+        NReaderExample example = new NReaderExample();
+        List<NReader> list=nReaderDao.selectByExample(example);
+        return list;
     }
 
     @Override

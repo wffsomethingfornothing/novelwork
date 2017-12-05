@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<div id="toolbar">
+<div id="toolbarOrder">
     <div style="padding: 5px; background-color: #fff;">
         <label>消费内容：</label>
         <input class="easyui-textbox" type="text" id="content">
@@ -24,13 +24,13 @@
 
 
 
-<table id="dg1"></table>
+<table id="dgOrder"></table>
 
 <script>
 
     //模糊查询
     function searchForm(){
-        $('#dg1').datagrid('load',{
+        $('#dgOrder').datagrid('load',{
             title:$('#content').val(),
             status:$('#status').combobox('getValue')
         });
@@ -46,7 +46,7 @@
     }
 
     function remove() {
-        var selections = $('#dg1').datagrid('getSelections');
+        var selections = $('#dgOrder').datagrid('getSelections');
         console.log(selections);
         if (selections.length == 0) {
             //客户没有选择记录
@@ -72,7 +72,7 @@
                     {'ids[]': ids},
                     //callback:后台处理成功的回调函数，相当于success，function类型
                     function (data) {
-                        $('#dg1').datagrid('reload');
+                        $('#dgOrder').datagrid('reload');
                     },
                     //dataType:返回的数据类型，如：json，String类型
                     'json'
@@ -82,10 +82,10 @@
         });
     }
 
-    $('#dg1').datagrid({
+    $('#dgOrder').datagrid({
 
         url:'orders/list',//显示所有账单
-        toolbar: '#toolbar',
+        toolbar: '#toolbarOrder',
         striped: true,//斑马线效果
         pagination: true,//显示分页工具栏
         fit: true,//使得数据表格自适应填充父容器
