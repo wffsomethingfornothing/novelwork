@@ -25,7 +25,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 		</style>
-    <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
 
 </head>
 
@@ -46,7 +45,7 @@
                             <a href="/message/sys" class="header-nav-a " accesskey="3" data-eid="qd_M03"><i class="iconfont">&#xe62c;</i><i class="qdp-unread elUnread dn">未读</i>消息中心</a>
                         </li>
                     </ul>
-                    <a href="#" id="headerLog" class="header-log" data-eid="qd_M06">
+                    <a id="headerLog" class="header-log" data-eid="qd_M06">
                         ${minecenterReader.username}
                     </a>
                     <%--<a id="login">123</a>--%>
@@ -117,7 +116,7 @@
                     <a href="#" class="qdp-button-a mlr4" data-eid="qd_M23">个人主页</a>
                     <a href="/setting" class="qdp-button-a qdp-button-icon ml12" data-eid="qd_M22"><i class="iconfont">&#xe64e;</i></a>
                 </div>
-                <h3><a href="#" data-eid="qd_M25">${minecenterReader.username}</a>
+                <h3><a id="changeusername" data-eid="qd_M25">${minecenterReader.username}</a>
                     <a href="/level"  class="home-user-level" data-eid="qd_M26">Lv${minecenterReader.level}</a>
                 </h3>
                 <div class="home-user-safety">
@@ -237,23 +236,39 @@
 
 </script>
 </html>
-<!--登录悬浮-->
-<%--
+<style type="text/css">
+    .XYTipsWindow .boxLoading { position: absolute; display: block; width: 90px; height: 30px; line-height: 30px; margin-left: -45px; margin-top: -15px; left: 50%; top: 50%; color: #f00; }
+    .XYTipsWindow .boxLoading { width:28px; margin-left: -14px; background:url("img/loading.gif") no-repeat; text-indent: -999em; text-align: center; }
+    .XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover { background-image: url("img/ico.png"); background-repeat: no-repeat; }
+    .XYTipsWindow .boxTitle { position: relative; border: 1px solid #A6C9E1; border-bottom: none; background-position: 0 0; background-repeat: repeat-x; height: 30px; line-height: 30px; }
+    .XYTipsWindow .boxTitle h3 { float: left; font-weight: normal; color: #666; font-size: 14px; margin: 0; text-indent: 10px; }
+    .XYTipsWindow .boxTitle span { position: absolute; width: 10px; background-position: -80px -40px; text-indent: -10em; right: 10px; top: 10px; height: 16px; overflow: hidden; cursor: pointer; }
+    .XYTipsWindow .boxTitle span.hover { background-position: -90px -40px; }
+    .XYTipsWindow .loadinglayer { line-height: 40px; background-position: 0 -100px!important; }
+    .XYTipsWindow .tipslayer { line-height: 20px; text-align: left; }
+    .XYTipsWindow .arrowLeft { position: absolute; width: 8px; height: 16px; background-position: -20px -170px; text-indent: -9999em; z-index: 20591; overflow: hidden; }
+    .XYTipsWindow .colseBtn { position: absolute; top: 5px; right: 5px; width: 8px; height: 8px; background-position: -55px -170px; text-indent: -9999em; cursor: pointer; z-index: 20591; overflow: hidden; }
+    .XYTipsWindow .boxError { position: absolute; left: 50%; top: 50%; margin-left: -60px; margin-top: -15px; width: 120px; height: 30px; line-height: 30px; color: #f00; }
+    .XYTipsWindow .boxError em { float: left; width:30px; height: 30px; background-position: -35px -140px; }
+    .XYTipsWindow .dialogBtn { margin: 5px 5px 0 0; width:80px; height:35px; background-position: 0 -30px; border:none; color:#333; }
+    .XYTipsWindow .dialogBtn.hover { background-position: 0 -65px; }
+    .XYTipsWindow .shadow { box-shadow:2px 2px 5px #C0BBB5; -moz-box-shadow: 2px 2px 5px #C0BBB5; -webkit-box-shadow:2px 2px 5px #C0BBB5; }
+</style>
 <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/jquery.XYTipsWindow.min.2.8.js"></script>
 <script type="text/javascript">
  $(document).ready(function() {
 	
-	$("#login").click(function(){
+	$("#changeusername").click(function(){
 		$.XYTipsWindow({
-			___title:"登录",
-			___content:"iframe:login.jsp",
-			___width:"400",
-			___height:"410",
+			___title:"改名",
+			___content:"iframe:1.html",
+			___width:"300",
+			___height:"80",
 			___showbg:true,
 			___drag:"___boxTitle"
 
 		});
 	});
  })
- </script>--%>
+ </script>

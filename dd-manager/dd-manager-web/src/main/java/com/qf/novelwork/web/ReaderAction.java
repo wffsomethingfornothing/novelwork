@@ -3,10 +3,7 @@ package com.qf.novelwork.web;
 import com.qf.novel.common.dto.Order;
 import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
-import com.qf.novel.pojo.po.NAuthor;
 import com.qf.novel.pojo.po.NReader;
-
-
 import com.qf.novel.service.ReaderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -75,6 +71,43 @@ public class ReaderAction {
         return i;
     }
 
+    @ResponseBody
+    @RequestMapping("/checkusername")
+    public String ajaxCheckUsername(String code){
+        List<NReader> list=readerService.selectAllName();
+        //System.out.println(list.toString());
+        int i=0;
+        Iterator<NReader> iterator = list.iterator();
+        while (iterator.hasNext())
+        {
+            String name=iterator.next().getUsername();
+            if(name.equals(code)){
+                i=1;
+                break;
+            }
+        }
+        if(i==1){
+            return "0";
+        }else{
+            return "1";
+        }
+    }
+
+    @RequestMapping("/xiugaiusername")
+    public String webReaderModify(NReader reader){
+        int i=0;
+        try {
+            i=readerService.modifyReader(reader);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if(i>0){
+            return "success";
+        }
+        else {
+            return "false";
+        }
+    }
 
 //删除
   /*  @ResponseBody

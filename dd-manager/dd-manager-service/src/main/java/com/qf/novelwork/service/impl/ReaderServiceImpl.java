@@ -118,6 +118,24 @@ public class ReaderServiceImpl implements ReaderService {
     }
 
     @Override
+    public int modifyReader(NReader reader) {
+        int i = 0;
+        NReader record = new NReader();
+        record.setUsername(reader.getUsername());
+
+        i = nReaderDao.updateByPrimaryKeySelective(record);
+
+        return i;
+    }
+
+    @Override
+    public List<NReader> selectAllName() {
+        NReaderExample example = new NReaderExample();
+        List<NReader> list=nReaderDao.selectByExample(example);
+        return list;
+    }
+
+    @Override
     public NReader selectReader(Long rid, Model model) {
         NReaderExample example = new NReaderExample();
         NReaderExample.Criteria criteria = example.createCriteria();
