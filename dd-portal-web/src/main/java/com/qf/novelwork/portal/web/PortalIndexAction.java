@@ -33,6 +33,8 @@ public class PortalIndexAction {
     public String portalIndex(@PathVariable("username") String username, Model model){
 
         model.addAttribute("username", username);
+        List<NNews> list1 = newsService.listNews();
+        model.addAttribute("newsList", list1);
 
         /*String tokenId = "";
 

@@ -54,11 +54,6 @@
                 <li data-options="attributes:{'href':'comment-list'}">查询评论</li>
             </ul>
         </div>
-        <div title="书籍管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
-            <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-item'}">solr索引库维护</li>
-            </ul>
-        </div>
         <div title="账单管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'order-list'}">查询账单</li>
@@ -67,11 +62,6 @@
         <div title="新闻管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'news-list'}">查看新闻</li>
-            </ul>
-        </div>
-        <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
-            <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-item'}">solr索引库维护</li>
             </ul>
         </div>
         <div title="小说分类管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
@@ -89,26 +79,6 @@
         <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
             <ul class="easyui-tree">
                 <li data-options="attributes:{'href':'index-book'}">solr索引库维护</li>
-            </ul>
-        </div>
-        <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
-            <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-book'}">solr索引库维护</li>
-            </ul>
-        </div>
-        <div title="系统管理" data-options="iconCls:'index-book'" style="padding:10px 0;">
-            <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-book'}">solr索引库维护</li>
-            </ul>
-        </div>
-        <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
-            <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-book'}">solr索引库维护</li>
-            </ul>
-        </div>
-        <div title="系统管理" data-options="iconCls:'icon-tip'" style="padding:10px 0;">
-            <ul class="easyui-tree">
-                <li data-options="attributes:{'href':'index-item'}">solr索引库维护</li>
             </ul>
         </div>
     </div>

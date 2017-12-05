@@ -127,7 +127,7 @@
                 </a>
             </div>
             <div class="logo fl">
-                <a href="#" >
+                <a href="${pageContext.request.contextPath}/" >
                     <img src="img/logo-qf.png">
                 </a>
             </div>

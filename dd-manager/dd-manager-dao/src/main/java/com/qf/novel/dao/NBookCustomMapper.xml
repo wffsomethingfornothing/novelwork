@@ -40,7 +40,7 @@
     LEFT JOIN n_author a ON b.aid = a.id
     LEFT JOIN n_book_cat c ON b.cid = c.id
     <include refid="Where_Clause"/>
-    order by b.updated
+    order by b.updated desc
     LIMIT #{page.offset},#{page.rows}
   </select>
 

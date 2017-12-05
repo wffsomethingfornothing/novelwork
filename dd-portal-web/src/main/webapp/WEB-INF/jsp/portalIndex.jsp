@@ -184,7 +184,7 @@
 		<div class="main-nav box-center cf">
 			<ul>
 				<li class="first"><span><em><i></i><i></i><i></i></em>作品分类</span></li>
-				<li class="nav-li"><a href="https://www.qidian.com/all"
+				<li class="nav-li"><a href="http://localhost:8082/novelwork"
 									  data-eid="qd_A15">全部作品</a></li>
 				<li class="nav-li"><a href="https://www.qidian.com/rank"
 									  data-eid="qd_A16">排行</a></li>
@@ -2126,7 +2126,7 @@
 				<li class="more"><a href="javascript:" id="top-nav-more"
 									target="" data-eid="qd_A54">更多<span></span></a>
 					<div class="dropdown">
-						<a href="https://www.qidian.com/all" target="_blank"
+						<a href="http://localhost:8082/novelwork" target="_blank"
 						   data-eid="qd_A169">全部作品</a><a href="https://www.qidian.com/2cy"
 														 target="" data-eid="qd_A55">二次元</a><a
 							href="https://www.qidian.com/qihuan" target="" data-eid="qd_A51">奇幻</a><a
@@ -2421,8 +2421,6 @@ speedTimer.push(new Date().getTime());</script>
         }
 
     }
-
-
     $(function(){
 
         $("#myCarousel").carousel('cycle');

@@ -23,8 +23,8 @@
             {field: 'ck', checkbox: true},
             {field: 'id', title: '回复编号', width: 120},
             {field: 'title', title: '评论标题', width: 100},
-            {field: 'poster', title: '评论者', width: 100},
-            {field: 'reviewer', title: '回复者', width: 100},
+            {field: 'poster', title: '回复者', width: 100},
+            {field: 'reviewer', title: '评论者', width: 100},
             {field: 'conntent', title: '回复内容', width: 100},
             {field: 'created', title: '创建时间', formatter: function (value) {
                 return moment(value).format('YYYY年MM月DD日 hh:mm:ss');
