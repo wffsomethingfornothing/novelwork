@@ -11,7 +11,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>奇幻频道_起点中文网</title>
+    <title>${bookList.get(0).catParentName}频道_千锋纵横网</title>
     <meta name="keywords" content="奇幻,奇幻阅读,奇幻下载">
     <meta name="description"
           content="读奇幻小说尽在小说网:起点中文小说网。本站提供奇幻小说排行榜,奇幻小说阅读、下载。以及奇幻小说最新更新章节和奇幻小说章节列表尽在小说门户-起点小说网,www.qidian.com">

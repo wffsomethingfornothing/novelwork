@@ -157,7 +157,7 @@
 
     <div class="box-center news">
         <div class="bread">
-            <span><a href="http:localhost:8081/novelwork/" target="_blank">首页</a></span> &gt; <span>新闻频道</span>
+            <span><a href="http://localhost:8081/novelwork/" target="_blank">首页</a></span> &gt; <span>新闻频道</span>
         </div>
         <div class="news-cot cf">
             <div class="lc fl">
