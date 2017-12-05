@@ -1,6 +1,5 @@
 package com.qf.novelwork.web;
 
-import com.qf.novel.common.dto.Order;
 import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
 import com.qf.novel.pojo.po.NAuthor;
@@ -34,12 +33,12 @@ public class AuthorAction {
 //分页查询全部，排序，模糊查询
     @ResponseBody
     @RequestMapping("/authors")
-    public Result<NAuthorCustom> listItemsByPage(Page page, Order order, NAuthorQuery query){
+    public Result<NAuthorCustom> listItemsByPage(Page page,NAuthorQuery query){
         //System.out.println(query.getState());
         Result<NAuthorCustom> list = null;
         List<NAuthorCustom> list1 = new ArrayList<>();
         try {
-            list = aothorService.listItemsByPage(page,order,query);
+            list = aothorService.listItemsByPage(page,query);
 
             List<NAuthorCustom> rows = list.getRows();
             List<Object> arr = new ArrayList<>();

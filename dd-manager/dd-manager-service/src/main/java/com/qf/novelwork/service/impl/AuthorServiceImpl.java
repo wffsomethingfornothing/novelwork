@@ -39,12 +39,11 @@ public class AuthorServiceImpl implements AuthorService {
 
 
     @Override
-    public Result<NAuthorCustom> listItemsByPage(Page page, Order order, NAuthorQuery query) {
+    public Result<NAuthorCustom> listItemsByPage(Page page,NAuthorQuery query) {
         Result<NAuthorCustom> result = null;
         try {
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("page", page);
-            map.put("order",order);
             map.put("query",query);
             result = new Result<NAuthorCustom>();
 

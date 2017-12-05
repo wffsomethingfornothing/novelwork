@@ -20,8 +20,6 @@
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<script language="javascript" type="text/javascript">
-        <!--
-        //获得当前时间,刻度为一千分一秒
         var initializationTime=(new Date()).getTime();
         function showLeftTime()
         {
@@ -33,7 +31,6 @@
             var minutes=now.getMinutes();
             var seconds=now.getSeconds();
             document.all.show.innerHTML=""+year+"年"+month+"月"+day+"日 "+hours+":"+minutes+":"+seconds+"";
-//一秒刷新一次显示时间
             var timeID=setTimeout(showLeftTime,1000);
         }
 	</script>
@@ -65,17 +62,12 @@
                 var jsonObj = {"adminname":username,"password":password};
                 //$.ajax提交
                 $.ajax({
-                    url:"${pageContext.request.contextPath}/checkname",
+                    url:"${pageContext.request.contextPath}/admin/checkname",
                     data:jsonObj,
                     dataType:"text",
                     type:"post",
                     cache:false,
                     success:function(rec){
-                        /* if(rec==0){
-                             $("#sp1").html("用户名不能为空").css("color","red");
-                         }else if(rec==1){
-                             $("#sp2").html("密码不能为空").css("color","red");
-                         }else*/
                         if(rec=='3'){
                             if (username!=""&&password!="") {
                                 alert("用户名或密码错误，请重新输入");
@@ -83,7 +75,7 @@
                                 password = "";
                             }
                         }else{
-                            location.href="${pageContext.request.contextPath}/index"
+                            location.href = "http://localhost:8080/novelwork/index";
                         }
                     },
                     error:function(){

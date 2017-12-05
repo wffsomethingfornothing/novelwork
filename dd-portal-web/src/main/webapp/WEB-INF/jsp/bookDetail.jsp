@@ -118,7 +118,7 @@
                 <p class="intro">${nbookCustom.readpoint }</p>
                 <p><em>${nbookCustom.count }</em><cite>字</cite><i>|</i><em>${nbookCustom.click }</em><cite>总点击</cite></p>
 
-                <p><a class="red-btn J-getJumpUrl " href="https://read.qidian.com/chapter/5ZeHRieKi97oTMoHyHZuUA2/Lz4oPAKh7PXwrjbX3WA1AA2" id="readBtn" data-eid="qd_G03" data-bid="1010677034" data-firstchapterjumpurl="//read.qidian.com/chapter/5ZeHRieKi97oTMoHyHZuUA2/Lz4oPAKh7PXwrjbX3WA1AA2">免费试读</a><a class="blue-btn add-book" id="addBookBtn" href="javascript:" data-eid="qd_G05" data-bookid="1010677034" data-bid="1010677034">加入书架</a>
+                <p><a class="red-btn J-getJumpUrl " href="${pageContext.request.contextPath}/bookcontentpage" id="readBtn" data-eid="qd_G03" data-bid="1010677034" >免费试读</a><a class="blue-btn add-book" id="addBookBtn" href="javascript:" data-eid="qd_G05" data-bookid="1010677034" data-bid="1010677034">加入书架</a>
                     <a class="blue-btn" id="topRewardBtn" href="javascript:" data-showtype="2" data-eid="qd_G07">投推荐票
                     </a>
                 </p>

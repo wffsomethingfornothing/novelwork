@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<div id="toolbar">
+<div id="toolbar1">
     <div style="padding: 5px; background-color: #fff;">
         <label>作者笔名：</label>
         <input class="easyui-textbox" type="text" id="title">
@@ -173,17 +173,17 @@
     $("#author").datagrid({
         url:"authors",
         multiSort:true,
-        toolbar: '#toolbar',
+        toolbar: '#toolbar1',
         striped:true,
         pagination:true,
         rownumbers:true,
         fit:true,
-        pageSize:20,
-        pageList:[20,50,100],
+        pageSize:10,
+        pageList:[10,20,50],
         columns:[[
             {field:'ck',checkbox:true},
             {field: 'id', title: '作家编号', width: 100},
-            {field: 'authorname', title: '作家笔名', width: 100,sortable:true},
+            {field: 'authorname', title: '作家笔名', width: 100},
             {field: 'bookname', title: '作品', width: 100},
             {field: 'sex', title: '性别', width: 100},
             {field: 'email', title: '邮箱', width: 100},

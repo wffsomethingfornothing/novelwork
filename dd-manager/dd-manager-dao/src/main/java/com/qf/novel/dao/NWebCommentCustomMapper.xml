@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.novel.dao.NWebCommentCustomMapper" >
+
+
+
+  <sql id="Base_Column_List" >
+    c.id, c.book_id, c.title,c.content, c.rid, c.created,c.status,
+    b.title as novel,o.authorname as author,r.username as reader
+  </sql>
+  <sql id="Where_Clause" >
+    <where>
+      c.status != 2
+      and c.rid=${webid}
+    </where>
+  </sql>
+
+
+  <select id="countComments" resultType="_int">
+    select count(1)
+    from n_comment c
+    LEFT JOIN n_book b ON c.book_id = b.id
+    LEFT JOIN n_reader r ON c.rid = r.id
+    <include refid="Where_Clause"/>
+  </select>
+
+  <select id="listCommentsByPage" resultType="com.qf.novel.pojo.vo.CommentCustom">
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM n_comment c
+    LEFT JOIN n_book b ON c.book_id = b.id
+    LEFT JOIN n_reader r ON c.rid = r.id
+    LEFT JOIN n_author o ON b.aid = o.id
+    <include refid="Where_Clause"/>
+    order by c.created
+    LIMIT #{page.offset},#{page.rows}
+  </select>
+
+</mapper>

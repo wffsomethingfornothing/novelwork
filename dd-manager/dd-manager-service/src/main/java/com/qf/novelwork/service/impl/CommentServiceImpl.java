@@ -4,6 +4,8 @@ import com.qf.novel.common.dto.Page;
 import com.qf.novel.common.dto.Result;
 import com.qf.novel.dao.NCommentCustomMapper;
 import com.qf.novel.dao.NReplyCustomMapper;
+import com.qf.novel.dao.NReplyMapper;
+import com.qf.novel.dao.NWebCommentCustomMapper;
 import com.qf.novel.pojo.vo.CommentCustom;
 import com.qf.novel.pojo.vo.ReplyCustom;
 import com.qf.novel.service.ICommentService;
@@ -29,6 +31,8 @@ public class CommentServiceImpl implements ICommentService {
     private NCommentCustomMapper commentCustomDao;
     @Autowired
     private NReplyCustomMapper replyCustomDao;
+    @Autowired
+    private NWebCommentCustomMapper nWebCommentCustomDao;
     @Override
     public Result<CommentCustom> listCommentsByPage(Page page) {
         Result<CommentCustom> result = null;
@@ -39,6 +43,26 @@ public class CommentServiceImpl implements ICommentService {
             result = new Result<CommentCustom>();
             result.setTotal(commentCustomDao.countComments());
             result.setRows(commentCustomDao.listCommentsByPage(map));
+
+        }catch (Exception e){
+            logger.error(e.getMessage(),e);
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    @Override
+    public Result<CommentCustom> weblistCommentsByPage(Page page, Long rid) {
+        Result<CommentCustom> result = null;
+        try{
+            Map<String,Object> map = new HashMap<String,Object>();
+            map.put("page",page);
+            map.put("webid",rid);
+            //map.put("query",query);
+            //System.out.println(map.get("webid"));
+            result = new Result<CommentCustom>();
+            result.setTotal(nWebCommentCustomDao.countComments(map));
+            result.setRows(nWebCommentCustomDao.listCommentsByPage(map));
 
         }catch (Exception e){
             logger.error(e.getMessage(),e);

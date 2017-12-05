@@ -14,4 +14,6 @@ public interface ICommentService {
     Result<CommentCustom> listCommentsByPage(Page page);
 
     Result<ReplyCustom> listReplysByPage(Long pid, Page page);
+
+    Result<CommentCustom> weblistCommentsByPage(Page page, Long rid);
 }

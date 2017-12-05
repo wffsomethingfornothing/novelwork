@@ -24,7 +24,7 @@
     <meta http-equiv="mobile-agent" content="format=html5; url=https://m.qidian.com">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="renderer" content="webkit">
-    <script src="js/stats.js" name="MTAH5" sid="500451537"></script>
+    <script src="${pageContext.request.contextPath}/js/stats.js" name="MTAH5" sid="500451537"></script>
     <script>document.domain = 'qidian.com';</script>
     <script>var speedTimer = [],
         speedZero = new Date().getTime();</script>
@@ -75,8 +75,8 @@
           href="https://qidian.gtimg.com/qd/favicon/qd_icon.fb0b7.ico">
     <link data-ignore="true" rel="Bookmark" type="image/x-icon"
           href="https://qidian.gtimg.com/qd/favicon/qd_icon.fb0b7.ico">
-    <link rel="stylesheet" data-ignore="true" href="css/Autocomplete_002.css">
-    <link charset="utf-8" rel="stylesheet" href="css/Autocomplete.css">
+    <link rel="stylesheet" data-ignore="true" href="${pageContext.request.contextPath}/css/Autocomplete_002.css">
+    <link charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/css/Autocomplete.css">
 </head>
 <body data-dynamic="false">
 <div class="share-img"><img
@@ -2321,7 +2321,7 @@ http://cpgame.qd.game.qidian.com/Home/Index/directLogin/name/ssss/way/1?qd_game_
 g_data.domain = '//www.qidian.com/qihuan';
 // 域名环境变量
 g_data.domainSearch = 'www.qidian.com/search';</script>
-<script data-ignore="true" src="js/LBF.js"></script>
+<script data-ignore="true" src="${pageContext.request.contextPath}/js/LBF.js"></script>
 <script>//
 LBF
 配置

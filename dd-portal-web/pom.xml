@@ -67,6 +67,7 @@
                     <uriEncoding>UTF-8</uriEncoding>
                     <port>8081</port>
                     <path>/novelwork</path>
+                    <uriEncoding>UTF-8</uriEncoding>
                 </configuration>
             </plugin>
         </plugins>
