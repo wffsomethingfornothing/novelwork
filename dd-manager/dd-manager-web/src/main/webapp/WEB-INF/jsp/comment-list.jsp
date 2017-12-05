@@ -2,7 +2,7 @@
          pageEncoding="UTF-8" %>
 
 
-<div id="toolbar">
+<div id="toolbarComment">
     <div style="padding: 5px; background-color: #fff;">
         <label>小说作者：</label>
         <input id="author" name="authorname" class="easyui-combobox" width="50px">
@@ -22,7 +22,7 @@
 <script>
 
     $('#comment').datagrid({
-
+        toolbar: '#toolbarComment',
         url:'comments',//显示所有书籍
         striped: true,//斑马线效果
         pagination: true,//显示分页工具栏
@@ -36,7 +36,7 @@
             {field: 'title', title: '标题', width: 100},
             {field: 'novel', title: '小说名', width: 100},
             {field: 'author', title: '作者', width: 100},
-            {field: 'reader', title: '读者名', width: 100},
+            {field: 'reader', title: '评论者', width: 100},
             {field: 'content', title: '评论内容', width: 200},
             {field: 'created', title: '创建时间', formatter: function (value) {
                 return moment(value).format('YYYY年MM月DD日 hh:mm:ss');
@@ -62,6 +62,15 @@
             var pid = selections[0].id;
             novel.closeTabs("查看回复");
             novel.addTabs("查看回复","replyPage?pid="+pid+"");
+        }
+
+    }
+
+    function searchForm() {
+        function searchForm() {
+            $('#comment').datagrid('load',{
+                novelName:$('#author').val()
+            });
         }
 
     }
